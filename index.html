@@ -4,84 +4,629 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sohan Ali Sikder | Retail Operations & Inventory Professional</title>
-<meta name="description" content="Sohan Ali Sikder is a retail operations and inventory management professional with 2+ years of practical experience in retail, stock management, sales and customer service.">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Sohan Ali Sikder is a retail operations and inventory management professional with 2+ years of hands-on experience.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Sohan Ali Sikder | Retail Operations & Inventory Professional">
 <meta property="og:description" content="Retail operations and inventory management professional based in Gazipur, Bangladesh.">
 <meta property="og:image" content="profile.jpg">
+<meta name="author" content="Sohan Ali Sikder">
+
+<!-- Favicon & Icons -->
+<link rel="icon" type="image/png" href="assets/favicon.png"> <!-- Add your favicon here -->
+
+<!-- Fonts & Icons -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <style>
-:root {
-  --bg: #0f172a;
-  --bg-card: #1e293b;
-  --bg-glass: rgba(30, 41, 59, 0.7);
-  --tx: #f8fafc;
-  --tx2: #94a3b8;
-  --bd: #334155;
-  --ac: #10b981;
-  --ac-glow: rgba(16, 185, 129, 0.2);
-  --gradient: linear-gradient(135deg, #10b981 0%, #059669 100%);
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--tx); line-height: 1.7; overflow-x: hidden; }
-a { color: inherit; text-decoration: none; }
-img { max-width: 100%; display: block; }
+    /* ==============================
+       Variables & Reset
+       ============================== */
+    :root {
+        --bg-body: #0d1117;
+        --bg-card: #161b22;
+        --text-primary: #c9d1d9;
+        --text-secondary: #8b949e;
+        --accent: #58a6ff; /* GitHub Blue */
+        --accent-hover: #79c0ff;
+        --border: #30363d;
+        --radius: 12px;
+        --font-main: 'Inter', sans-serif;
+    }
 
-:focus-visible { outline: 2px solid var(--ac); outline-offset: 3px; }
-.skip { position: absolute; left: -999px; background: var(--ac); color: #fff; padding: 8px 14px; z-index: 99; }
-.skip:focus { left: 8px; top: 8px; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-.w { max-width: 1200px; margin: auto; padding: 0 24px; }
-section { padding: 100px 0; border-top: 1px solid var(--bd); position: relative; }
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px;
+        font-size: 16px;
+    }
 
-.lbl { font-size: .75rem; letter-spacing: .2em; text-transform: uppercase; color: var(--ac); font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
-.lbl:before { content: ""; width: 24px; height: 2px; background: var(--ac); border-radius: 2px; }
+    body {
+        font-family: var(--font-main);
+        background-color: var(--bg-body);
+        color: var(--text-primary);
+        line-height: 1.6;
+        overflow-x: hidden;
+    }
 
-h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; font-weight: 800; letter-spacing: -.03em; }
-h2 { font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.2; font-weight: 800; letter-spacing: -.02em; margin-bottom: 24px; }
-h3 { font-size: 1.15rem; font-weight: 700; }
-p { color: var(--tx2); }
+    a { color: inherit; text-decoration: none; transition: color 0.2s; }
+    img { max-width: 100%; height: auto; display: block; }
 
-.btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; min-height: 50px; border: 1px solid var(--bd); border-radius: 12px; font-weight: 600; font-size: .95rem; background: var(--bg-card); color: var(--tx); cursor: pointer; font-family: inherit; transition: all .3s ease; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.btn:hover { transform: translateY(-3px); border-color: var(--ac); box-shadow: 0 10px 20px -5px var(--ac-glow); }
-.btn.p { background: var(--gradient); border-color: transparent; color: #fff; }
+    /* Utilities */
+    .w { max-width: 1100px; margin: auto; padding: 0 20px; }
+    .section { padding: 80px 0; border-top: 1px solid var(--border); }
+    
+    .lbl {
+        font-size: 0.75rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--text-secondary);
+        font-weight: 600;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .lbl::before { content: ''; width: 24px; height: 2px; background-color: var(--accent); }
 
-.bar { display: block; height: 4px; background: var(--gradient); border-radius: 2px; width: 60px; margin: 16px 0; }
-.sku { font-size: .7rem; letter-spacing: .15em; color: var(--tx2); font-family: monospace; }
-.card { background: var(--bg-card); border: 1px solid var(--bd); border-radius: 16px; padding: 32px; transition: all .3s ease; position: relative; overflow: hidden; }
-.card:hover { transform: translateY(-5px); border-color: var(--ac); box-shadow: 0 20px 40px -15px rgba(0,0,0,0.5); }
+    h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; }
+    h2 { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700; margin-bottom: 24px; }
+    h3 { font-size: 1.25rem; font-weight: 600; }
+    p { color: var(--text-secondary); font-size: 1.1rem; }
 
-.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--ac); margin-right: 8px; box-shadow: 0 0 12px var(--ac); animation: pl 2s infinite; }
-@keyframes pl { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .4; transform: scale(0.85); } }
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px 24px;
+        border-radius: var(--radius);
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.2s, transform 0.1s;
+        border: 1px solid transparent;
+    }
+    .btn:active { transform: scale(0.98); }
 
-/* NAVBAR */
-nav { position: sticky; top: 0; z-index: 100; transition: all .4s ease; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(16px); border-bottom: 1px solid var(--bd); }
-nav .w { display: flex; align-items: center; justify-content: space-between; height: 80px; }
-.logo { font-weight: 800; font-size: 1.4rem; letter-spacing: -0.02em; }
-.logo b { color: var(--ac); }
-.links { display: flex; gap: 32px; align-items: center; font-size: .9rem; font-weight: 600; }
-.links a { color: var(--tx2); transition: color .3s; }
-.links a:hover, .links a.active { color: var(--ac); }
-.ham { display: none; background: none; border: 0; width: 44px; height: 44px; cursor: pointer; }
-.ham i { display: block; width: 24px; height: 2px; background: var(--tx); margin: 6px auto; transition: .3s; }
-.ham.o i:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-.ham.o i:nth-child(2) { opacity: 0; }
-.ham.o i:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    .btn-primary {
+        background-color: #238636; /* GitHub Green */
+        color: #fff;
+    }
+    .btn-primary:hover { background-color: #2ea043; }
 
-/* HERO */
-.hero { display: grid; grid-template-columns: 1.2fr .8fr; gap: 64px; align-items: center; padding: 80px 0 120px; }
-.badge { display: inline-flex; align-items: center; border: 1px solid var(--bd); color: var(--tx); font-size: .75rem; letter-spacing: .15em; font-weight: 700; padding: 8px 16px; border-radius: 99px; margin-bottom: 24px; background: var(--bg-card); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
-.hero h1 span { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.sub { font-weight: 600; margin: 20px 0 16px; font-size: 1.1rem; color: var(--tx); }
-.btns { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 36px; }
+    .btn-secondary {
+        background-color: var(--bg-card);
+        color: var(--text-primary);
+        border-color: var(--border);
+    }
+    .btn-secondary:hover { background-color: #21262d; }
 
-.frame { position: relative; border-radius: 24px; padding: 12px; background: var(--bg-card); border: 1px solid var(--bd); aspect-ratio: 4/5; max-width: 380px; margin-left: auto; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.7); }
-.frame .ph { width: 100%; height: 100%; border-radius: 16px; background: var(--bd); display: grid; place-items: center; font-size: 4rem; color: var(--tx2); overflow: hidden; position: relative; }
-.frame .ph::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,23,42,0.6), transparent 60%); }
-.frame img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
-.frame:hover img { transform: scale(1.05); }
+    .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background-color: rgba(56, 165, 255, 0.15);
+        color: var(--accent);
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        margin-bottom: 20px;
+        border: 1px solid rgba(56, 165, 255, 0.3);
+    }
+    .status-dot { height: 8px; width: 8px; background-color: var(--accent); border-radius: 50%; display: inline-block; }
 
-.tag { position
+    .card {
+        background-color: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 24px;
+        transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .card:hover { border-color: var(--accent); box-shadow: 0 10px 30px -10px rgba(0,0,0,0.3); }
+
+    .highlight { color: var(--accent); }
+
+    /* Animation: Reveal on scroll */
+    .rv { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+    .rv.in { opacity: 1; transform: none; }
+
+    /* ==============================
+       Layout & Components
+       ============================== */
+    /* Navbar */
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: rgba(13, 17, 23, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--border);
+        height: 70px;
+        display: flex;
+        align-items: center;
+    }
+    nav .w { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+    .logo { font-weight: 800; font-size: 1.2rem; }
+    .logo b { color: var(--accent); }
+    .nav-links { display: flex; gap: 24px; font-size: 0.9rem; font-weight: 500; }
+    .nav-links a:hover { color: var(--accent); }
+    .ham { display: none; background: none; border: 0; color: var(--text-primary); font-size: 1.5rem; cursor: pointer; }
+
+    /* Hero */
+    header.section { border-top: 0; padding: 120px 0 80px; }
+    .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 350px;
+        gap: 60px;
+        align-items: center;
+    }
+    .hero-content h1 { margin-bottom: 16px; }
+    .hero-content p { max-width: 600px; }
+    .hero-btns { display: flex; gap: 12px; margin-top: 40px; flex-wrap: wrap; }
+
+    .profile-frame {
+        position: relative;
+        border-radius: 50%;
+        padding: 8px;
+        background: linear-gradient(135deg, var(--accent), #ff7b72);
+        aspect-ratio: 1/1;
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+        box-shadow: 0 20px 50px -20px rgba(0,0,0,0.5);
+    }
+    .profile-frame img {
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: 4px solid var(--bg-body);
+    }
+    .profile-tag {
+        position: absolute;
+        bottom: 10%;
+        right: -10px;
+        background-color: var(--bg-card);
+        padding: 8px 16px;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .profile-tag i { color: #e3b341; font-size: 0.9rem; }
+    .profile-tag span { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; }
+
+    /* About */
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 60px;
+    }
+    blockquote {
+        border-left: 3px solid var(--accent);
+        padding-left: 24px;
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: var(--text-primary);
+        font-style: italic;
+        margin-top: 32px;
+    }
+
+    /* Experience */
+    .timeline { position: relative; padding-left: 30px; margin-top: 40px; }
+    .timeline::before { content: ''; position: absolute; left: 0; top: 10px; bottom: 10px; width: 2px; background-color: var(--border); }
+    .timeline-item { position: relative; padding-bottom: 40px; }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .timeline-marker {
+        position: absolute; left: -36px; top: 6px;
+        width: 14px; height: 14px;
+        border-radius: 50%; background-color: var(--bg-body);
+        border: 3px solid var(--accent);
+        box-shadow: 0 0 0 5px rgba(88, 166, 255, 0.1);
+    }
+    .timeline-content .meta { font-size: 0.85rem; color: var(--text-secondary); letter-spacing: 0.1em; font-family: monospace; margin-bottom: 4px; display: block; }
+    .timeline-content h3 { margin-bottom: 8px; }
+    .timeline-content ul { list-style: none; margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; font-size: 0.95rem; }
+    .timeline-content li { display: flex; align-items: center; gap: 8px; color: var(--text-secondary); }
+    .timeline-content li::before { content: '\f00c'; font-family: 'Font Awesome 6 Free'; font-weight: 900; font-size: 0.8rem; color: #2ea043; }
+
+    /* Skills & Value */
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    
+    .skill-card { text-align: center; padding: 32px 16px; }
+    .skill-card i.ic { font-size: 2.5rem; color: var(--accent); margin-bottom: 24px; }
+
+    .value-card { padding: 32px; }
+    .value-card .num { font-size: 1.5rem; font-weight: 800; color: var(--accent); margin-bottom: 16px; font-family: monospace; }
+    .value-card h3 { margin-bottom: 12px; }
+
+    /* Career Journey */
+    .journey-map { display: flex; gap: 10px; margin-top: 40px; flex-wrap: wrap; }
+    .journey-step {
+        flex: 1; min-width: 150px;
+        padding: 20px;
+        background-color: var(--bg-card);
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        text-align: center; font-weight: 600;
+        position: relative;
+    }
+    .journey-step::before { content: ''; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); width: 8px; height: 8px; border-radius: 50%; background-color: var(--accent); }
+
+    /* Education */
+    .edu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .edu-card { padding: 32px; display: flex; gap: 20px; align-items: start; }
+    .edu-card i.ic { font-size: 1.8rem; color: var(--accent); flex: none; margin-top: 4px; }
+
+    /* Stats */
+    .stats-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background-color: var(--border); border-radius: var(--radius); overflow: hidden; }
+    .stats-bar div { background-color: var(--bg-card); padding: 40px 20px; text-align: center; }
+    .stats-bar b { font-size: 3rem; font-weight: 800; color: var(--accent); }
+    .stats-bar span { font-size: 0.9rem; color: var(--text-secondary); display: block; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.05em; }
+
+    /* Contact & Footer */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; }
+    
+    .contact-form { display: grid; gap: 20px; }
+    .form-group label { display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 8px; }
+    .form-control {
+        width: 100%; padding: 12px;
+        background-color: var(--bg-card); border: 1px solid var(--border);
+        border-radius: var(--radius); color: var(--text-primary);
+        font-family: inherit; font-size: 1rem; transition: border-color 0.2s;
+    }
+    .form-control:focus { outline: none; border-color: var(--accent); }
+    
+    footer { text-align: center; padding: 60px 0; border-top: 1px solid var(--border); background-color: #010409; }
+    .social-links { display: flex; gap: 24px; justify-content: center; margin-bottom: 24px; font-size: 1.5rem; }
+    .social-links a:hover { color: var(--accent); transform: translateY(-3px); }
+    footer p { font-size: 0.9rem; }
+
+    /* ==============================
+       Responsive
+       ============================== */
+    @media(max-width: 1023px) {
+        .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+        .hero-content p { margin: 0 auto; }
+        .hero-btns { justify-content: center; }
+        .profile-frame { margin: 0 auto; }
+        .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+        .grid-4, .grid-3, .edu-grid { grid-template-columns: repeat(2, 1fr); }
+        .stats-bar { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media(max-width: 767px) {
+        nav .ham { display: block; }
+        .nav-links {
+            position: absolute;
+            top: 70px; left: 0; right: 0;
+            background-color: var(--bg-body);
+            flex-direction: column;
+            padding: 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+        .nav-links.o { max-height: 500px; }
+        .nav-links a { padding: 12px 0; display: block; border-bottom: 1px solid var(--border); }
+        .nav-links a:last-child { border-bottom: 0; }
+        .timeline-content ul, .edu-grid, .grid-4, .grid-3 { grid-template-columns: 1fr; }
+        .stats-bar { grid-template-columns: 1fr; }
+        .profile-tag { right: 0; left: 0; margin: 0 auto; width: auto; max-width: 200px; }
+    }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- NAVBAR -->
+<nav id="nav">
+    <div class="w">
+        <a class="logo" href="#home" aria-label="Sohan home">SOHAN<b>.</b></a>
+        <button class="ham" id="ham" aria-label="Toggle menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links" id="nav-links">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#work">Value</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+            <a class="btn btn-primary" href="#contact" style="padding: 8px 16px;">Let's Talk →</a>
+        </div>
+    </div>
+</nav>
+
+<main id="main">
+    <!-- HERO SECTION -->
+    <header class="section" id="home">
+        <div class="w">
+            <div class="hero-grid">
+                <div class="hero-content rv in"> <!-- 'in' added to keep it revealed initially -->
+                    <div class="badge">
+                        <span class="status-dot"></span>
+                        <span>2+ YEARS IN RETAIL OPERATIONS</span>
+                    </div>
+                    <h1>Hi, I'm <span class="highlight">Sohan</span>. <br> I keep retail operations organized.</h1>
+                    <p>Retail Operations • Inventory Management • Sales • Customer Service</p>
+                    <p style="margin-top: 24px;">Specialized in driving efficiency in store operations through accurate stock management, reliable record-keeping, and exceptional customer service.</p>
+                    <div class="hero-btns">
+                        <a class="btn btn-primary" href="#experience">Explore My Experience</a>
+                        <a class="btn btn-secondary" href="Sohan-Ali-Sikder-CV.pdf" download>Download CV ↓</a>
+                    </div>
+                </div>
+                <div class="profile-frame rv in">
+                    <img src="profile.jpg" alt="Sohan Ali Sikder Portrait">
+                    <div class="profile-tag card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Gazipur, Bangladesh</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ABOUT SECTION -->
+    <section class="section rv" id="about">
+        <div class="w">
+            <div class="about-grid">
+                <div>
+                    <div class="lbl">About Me</div>
+                    <h2>Built on Real Retail Experience.</h2>
+                </div>
+                <div>
+                    <p>I am a dedicated Retail Operations and Inventory Management professional based in Gazipur, Bangladesh. With over two years of hands-on experience in store operations, I understand the critical link between accurate stock control and business profitability.</p>
+                    <p style="margin-top: 16px;">My day-to-day involves everything from receiving and organizing inventory to supporting sales and ensuring customers leave satisfied. I am passionate about maintaining order and data integrity in a fast-paced retail environment.</p>
+                    <blockquote>"Accuracy, consistency, and a customer-first approach are the cornerstones of excellent retail operations."</blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section class="section rv" id="experience">
+        <div class="w">
+            <div class="lbl">Career History</div>
+            <h2>Where I've Worked.</h2>
+            <div class="timeline">
+                <!-- Job 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content card">
+                        <span class="meta">2021 - PRESENT • CURRENT ROLE</span>
+                        <h3>Shop Executive — Apon Tech Ltd.</h3>
+                        <p>Responsible for supporting daily retail store operations, executing sales activities, and maintaining tight inventory control.</p>
+                        <ul>
+                            <li>Daily Operations</li>
+                            <li>Sales & Customer Service</li>
+                            <li>Inventory Management</li>
+                            <li>Stock Receiving & Checking</li>
+                            <li>Record Keeping</li>
+                            <li>POS/ERP Operations</li>
+                            <li>Product Organization</li>
+                            <li>Team Coordination</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Add more jobs here if needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section rv" id="skills">
+        <div class="w">
+            <div class="lbl">Expertise</div>
+            <h2>Tools of the Trade.</h2>
+            <div class="grid-4" id="skills-container">
+                <!-- Skills generated via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- VALUE ADD SECTION -->
+    <section class="section rv" id="work">
+        <div class="w">
+            <div class="lbl">Impact Areas</div>
+            <h2>How I Add Value.</h2>
+            <div class="grid-3" id="value-container">
+                <!-- Value areas generated via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- JOURNEY SECTION -->
+    <section class="section rv" id="journey">
+        <div class="w">
+            <div class="lbl">Career Path</div>
+            <h2>One Step at a Time.</h2>
+            <div class="journey-map">
+                <div class="journey-step">Education</div>
+                <div class="journey-step">Retail Foundation</div>
+                <div class="journey-step">Inventory Specialization</div>
+                <div class="journey-step">Operations Management</div>
+                <div class="journey-step">Growth</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="section rv" id="education">
+        <div class="w">
+            <div class="lbl">Academic Background</div>
+            <h2>Academic Journey.</h2>
+            <div class="edu-grid">
+                <div class="edu-card card">
+                    <i class="fas fa-graduation-cap ic"></i>
+                    <div>
+                        <h3>B.S.S. (Ongoing)</h3>
+                        <p>Bhawal Badre Alam Government College</p>
+                        <span class="sku">SESSION 2021–2022</span>
+                    </div>
+                </div>
+                <div class="edu-card card">
+                    <i class="fas fa-book-open ic"></i>
+                    <div>
+                        <h3>HSC</h3>
+                        <p>North Laskarchala High School and College</p>
+                        <span class="sku">PASSED 2021 • GPA 4.25</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS SECTION -->
+    <section class="section rv" id="stats">
+        <div class="w">
+            <div class="lbl">At a Glance</div>
+            <h2>Professional Snapshot.</h2>
+            <div class="stats-bar card">
+                <div><b>2+</b><span>Years Experience</span></div>
+                <div><b>Retail</b><span>Core Industry</span></div>
+                <div><b>Inventory</b><span>Expertise</span></div>
+                <div><b>Gazipur</b><span>Location</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="section rv" id="next">
+        <div class="w">
+            <div class="cta card">
+                <h2>Ready for the next operational challenge?</h2>
+                <p>If your retail team needs a dedicated, organized, and dependable professional to streamline inventory and operations, let's connect.</p>
+                <a class="btn" href="#contact">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section rv" id="contact">
+        <div class="w">
+            <div class="contact-grid">
+                <div>
+                    <div class="lbl">Say Hello</div>
+                    <h2>Connect with Me.</h2>
+                    <p>Feel free to reach out regarding opportunities, collaborations, or just to discuss retail operations.</p>
+                    <ul class="ct" style="margin-top: 40px;">
+                        <li><i class="fas fa-map-marker-alt"></i>Gazipur, Bangladesh</li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:sohan.aponbazaar@gmail.com">sohan.aponbazaar@gmail.com</a></li>
+                        <li><i class="fas fa-phone"></i><a href="tel:+8801729948649">+8801729948649</a></li>
+                    </ul>
+                    <a class="btn btn-primary" href="Sohan-Ali-Sikder-CV.pdf" download style="margin-top: 24px; width: 100%;">Download My CV ↓</a>
+                </div>
+                <form class="contact-form card" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="form-control" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" required placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-control" rows="5" required placeholder="How can I help you?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message →</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="w">
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/suhan-ali-bb3a14324" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/TheSohanSaga" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="mailto:sohan.aponbazaar@gmail.com" aria-label="Email"><i class="far fa-envelope"></i></a>
+        </div>
+        <p>&copy; 2026 Sohan Ali Sikder. All rights reserved.</p>
+        <p style="font-size: 0.8rem; margin-top: 8px;">Designed for success in retail operations.</p>
+    </div>
+</footer>
+
+<script>
+    /* ==============================
+       JavaScript
+       ============================== */
+
+    // 1. Skills and Value Data
+    const skills = [
+        { icon: 'fa-boxes-stacked', name: 'Inventory Management' },
+        { icon: 'fa-store', name: 'Retail Operations' },
+        { icon: 'fa-headset', name: 'Customer Service' },
+        { icon: 'fa-cash-register', name: 'POS/ERP Systems' },
+        { icon: 'fa-file-excel', name: 'Microsoft Excel' },
+        { icon: 'fa-people-group', name: 'Team Coordination' },
+        { icon: 'fa-chart-line', name: 'Sales Analysis' },
+        { icon: 'fa-clipboard-check', name: 'Quality Control' }
+    ];
+
+    const values = [
+        { num: '01', title: 'Stock Accuracy', desc: 'Maintaining precise inventory records to prevent shrinkage and stockouts.' },
+        { num: '02', title: 'Operational Efficiency', desc: 'Streamlining daily routines for smoother store functioning.' },
+        { num: '03', title: 'Customer Satisfaction', desc: 'Ensuring positive experiences through attentive service and product knowledge.' },
+        { num: '04', title: 'Data Integrity', desc: 'Reliable sales data entry and management in POS/ERP systems.' },
+        { num: '05', title: 'Team Collaboration', desc: 'Working effectively with colleagues to achieve common goals.' },
+        { num: '06', title: 'Proactive Problem Solving', desc: 'Identifying and resolving operational issues quickly.' }
+    ];
+
+    // 2. Populate Sections
+    const skillsContainer = document.getElementById('skills-container');
+    skills.forEach(skill => {
+        skillsContainer.innerHTML += `
+            <div class="card skill-card rv">
+                <i class="ic fas ${skill.icon}"></i>
+                <h3>${skill.name}</h3>
+            </div>
+        `;
+    });
+
+    const valueContainer = document.getElementById('value-container');
+    values.forEach(value => {
+        valueContainer.innerHTML += `
+            <div class="card value-card rv">
+                <div class="num">${value.num}</div>
+                <h3>${value.title}</h3>
+                <p style="font-size: 0.95rem;">${value.desc}</p>
+            </div>
+        `;
+    });
+
+    // 3. Navbar Mobile Toggle
+    const hamBtn = document.getElementById('ham');
+    const navLinks = document.getElementById('nav-links');
+    hamBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('o');
+        const expanded = hamBtn.getAttribute('aria-expanded') === 'true';
+        hamBtn.setAttribute('aria-expanded', !expanded);
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('o');
+            hamBtn.setAttribute('aria-expanded', 'false');
+        });
+    });
+
+    // 4. Reveal on Scroll Animation
+    const revealElements = document.querySelectorAll('.rv');
+    const revealOptions = { threshold: 0.1, rootMargin: '0px 0px -5
