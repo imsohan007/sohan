@@ -1,764 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sohan Ali Sikder | Inventory and Operations Executive</title>
-<meta name="description" content="Portfolio of Sohan Ali Sikder: two years of inventory, store and team coordination experience at Apon Tech Ltd. Based in Gazipur, Bangladesh.">
-<script>document.documentElement.classList.add("js")</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Sora:wght@500;700;800&display=swap" rel="stylesheet">
+<title>Liz Daily Accounts</title>
 <style>
-:root{
-  --bg:#F2F6FA; --card:#fff; --ink:#0E1B26; --muted:#52636F; --line:#DCE5EC;
-  --deep:#06141F; --navy:#0B2536; --blue:#0A6AA1; --cyan:#22C1FF; --wa:#157A43;
-  --head:"Sora","Segoe UI",system-ui,sans-serif; --body:"DM Sans","Segoe UI",system-ui,sans-serif;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:84px}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{font-family:var(--body);font-size:1.0625rem;line-height:1.65;color:var(--ink);background:var(--bg)}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-h1,h2,h3{font-family:var(--head);line-height:1.1}
-svg{display:block}
-
-/* floating nav */
-.nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:20;display:flex;align-items:center;gap:6px;padding:6px;border-radius:999px;background:rgba(6,20,31,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.14);max-width:calc(100% - 20px)}
-.nav a{color:#CFE6F3;text-decoration:none;font-weight:500;font-size:.93rem;padding:8px 14px;border-radius:999px;white-space:nowrap}
-.nav a:hover{background:rgba(255,255,255,.12);color:#fff}
-.nav a.cta{background:var(--cyan);color:#04202E;font-weight:700}
-
-/* hero */
-.hero{position:relative;overflow:hidden;color:#fff;background:radial-gradient(900px 520px at 85% 20%,rgba(34,193,255,.35),transparent 60%),radial-gradient(700px 480px at 0% 100%,rgba(10,106,161,.55),transparent 60%),var(--deep);padding:150px 0 110px}
-.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center}
-.pill{display:inline-flex;align-items:center;gap:10px;padding:7px 16px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);font-size:.95rem;color:#D6ECF8}
-.pill i{width:9px;height:9px;border-radius:50%;background:#3DDC84;box-shadow:0 0 0 4px rgba(61,220,132,.25)}
-.hero h1{font-size:clamp(2.8rem,7vw,5.2rem);font-weight:800;letter-spacing:-.035em;margin:22px 0 12px}
-.hero .role{font-family:var(--head);font-size:clamp(1.15rem,2.2vw,1.5rem);font-weight:500;color:var(--cyan);margin-bottom:18px}
-.hero p.sum{max-width:32em;color:#B9D0DF;font-size:1.15rem}
-.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;font-weight:700;text-decoration:none;border:1.5px solid rgba(255,255,255,.35);color:#fff;transition:transform .15s,background .15s}
-.btn:hover{transform:translateY(-2px);background:rgba(255,255,255,.12)}
-.btn.wa{background:var(--wa);border-color:var(--wa)}
-.btn.wa:hover{background:#1C9A55}
-.btn svg{width:20px;height:20px}
-.social{display:flex;gap:12px;margin-top:30px;align-items:center;color:#9FC1D4;font-size:.95rem}
-.logo{width:46px;height:46px;border-radius:14px;flex:none;transition:transform .15s}
-a:hover>.logo{transform:translateY(-3px)}
-.social a{display:block;line-height:0}
-
-.photo{position:relative;justify-self:center;width:min(100%,380px)}
-.photo .frame{aspect-ratio:4/5;border-radius:44% 44% 36px 36px/32% 32% 36px 36px;overflow:hidden;background:var(--cyan);box-shadow:0 0 0 10px rgba(255,255,255,.08),0 40px 80px rgba(0,0,0,.45)}
-.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
-.chip{position:absolute;background:#fff;color:var(--ink);padding:10px 16px;border-radius:16px;box-shadow:0 14px 30px rgba(0,0,0,.28);font-size:.9rem;line-height:1.3}
-.chip b{display:block;font-family:var(--head);font-size:1.15rem;color:var(--navy)}
-.chip.a{left:-26px;bottom:62px}
-.chip.b{right:-18px;top:46px}
-
-/* sections */
-section{padding:92px 0 0}
-section:last-of-type{padding-bottom:90px}
-.sh{max-width:36em;margin-bottom:34px}
-.sh h2{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;letter-spacing:-.025em;color:var(--navy)}
-.sh p{color:var(--muted);margin-top:10px;font-size:1.1rem}
-.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:30px}
-
-.about{display:grid;grid-template-columns:1.4fr 1fr;gap:20px}
-.about .big{font-family:var(--head);font-size:clamp(1.25rem,2.4vw,1.7rem);line-height:1.4;font-weight:500;color:var(--navy)}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.stat{border-radius:24px;padding:24px;background:var(--navy);color:#fff}
-.stat:nth-child(2){background:var(--blue)}
-.stat:nth-child(3){background:#E2EFF8;color:var(--navy)}
-.stat:nth-child(4){background:var(--cyan);color:#04202E}
-.stat b{display:block;font-family:var(--head);font-size:1.7rem;line-height:1.1}
-.stat>span{font-size:.95rem;opacity:.85}
-
-.jobs{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.job h3{font-size:1.4rem;color:var(--navy)}
-.job .meta{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 18px}
-.tag{padding:5px 13px;border-radius:999px;background:#E2EFF8;color:var(--blue);font-weight:700;font-size:.9rem}
-.job ul{list-style:none}
-.job li{position:relative;padding:8px 0 8px 26px;border-top:1px solid var(--line)}
-.job li::before{content:"";position:absolute;left:2px;top:17px;width:10px;height:10px;border-radius:50%;background:var(--cyan)}
-
-.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.skills h3{font-size:1.2rem;color:var(--navy);margin-bottom:16px}
-.chips{display:flex;flex-wrap:wrap;gap:9px}
-.chips span{padding:8px 15px;border-radius:999px;background:var(--bg);border:1px solid var(--line);font-weight:500;font-size:.98rem}
-.chips small{color:var(--muted)}
-
-.edu{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.edu .card{position:relative;overflow:hidden}
-.edu .card::after{content:"";position:absolute;left:0;top:0;width:100%;height:6px;background:linear-gradient(90deg,var(--blue),var(--cyan))}
-.edu h3{font-size:1.25rem;color:var(--navy);margin:8px 0 6px}
-.edu p{color:var(--muted)}
-.edu .when{margin-top:14px;color:var(--blue);font-weight:700}
-
-/* contact */
-.contact{border-radius:32px;background:radial-gradient(600px 300px at 100% 0%,rgba(34,193,255,.28),transparent 60%),var(--deep);color:#fff;padding:48px;display:grid;grid-template-columns:1fr 1.1fr;gap:40px}
-.contact h2{font-size:clamp(1.9rem,4vw,2.7rem);font-weight:800;letter-spacing:-.025em}
-.contact p{color:#B9D0DF;margin:14px 0 26px}
-.links{display:grid;gap:12px}
-.link{display:flex;align-items:center;gap:16px;padding:12px 18px 12px 12px;border-radius:18px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);text-decoration:none;transition:background .15s,transform .15s}
-.link:hover{background:rgba(255,255,255,.14);transform:translateX(4px)}
-.link .ico{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:rgba(255,255,255,.12);flex:none}
-.link .ico svg{width:22px;height:22px}
-.link small{display:block;color:#9FC1D4;line-height:1.2}
-.link b{font-weight:700;overflow-wrap:anywhere}
-.link.static{pointer-events:none}
-footer{padding:26px 0 34px;color:var(--muted);text-align:center;font-size:.95rem}
-
-@media (max-width:860px){
-  .hero{padding:120px 0 70px}
-  .hero .wrap{grid-template-columns:1fr;gap:48px}
-  .photo{width:min(78%,320px)}
-  .about,.jobs,.skills,.edu,.contact{grid-template-columns:1fr}
-  .contact{padding:30px 22px}
-  .nav a:not(.cta):nth-child(n+4){display:none}
-}
-@media (max-width:480px){
-  .chip.a{left:-8px}.chip.b{right:-6px}
-  .btn{width:100%;justify-content:center}
-  .link{gap:12px;padding-right:12px}
-  .link b{font-size:.92rem}
-}
-
-/* ---------- motion ---------- */
-@property --a{syntax:"<angle>";inherits:false;initial-value:0deg}
-body{overflow-x:hidden}
-.progress{position:fixed;top:0;left:0;height:4px;width:0;z-index:30;background:linear-gradient(90deg,var(--blue),var(--cyan),#3DDC84)}
-.nav a.on{background:rgba(255,255,255,.16);color:#fff}
-.nav a.cta.on{background:var(--cyan);color:#04202E}
-
-.hero{padding-bottom:150px}
-.hero .wrap{position:relative;z-index:2}
-.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;pointer-events:none}
-.b1{width:420px;height:420px;background:#0A6AA1;left:-120px;top:60px;animation:drift 14s ease-in-out infinite alternate}
-.b2{width:360px;height:360px;background:#22C1FF;right:-80px;top:-60px;animation:drift 11s ease-in-out infinite alternate-reverse}
-.b3{width:280px;height:280px;background:#3DDC84;right:30%;bottom:-140px;opacity:.28;animation:drift 17s ease-in-out infinite alternate}
-@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(70px,50px) scale(1.2)}}
-
-.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .04em .12em}
-.hero h1 .w>span{display:inline-block;transform:translateY(115%);animation:rise 1s cubic-bezier(.2,.85,.2,1) forwards}
-.hero h1 .w:nth-child(1)>span{animation-delay:.15s}
-.hero h1 .w:nth-child(2)>span{animation-delay:.3s}
-.hero h1 .w:nth-child(3)>span{animation-delay:.45s}
-@keyframes rise{to{transform:none}}
-.pill,.hero .role,.hero .sum,.actions,.social{opacity:0;animation:up .8s cubic-bezier(.2,.85,.2,1) forwards}
-.pill{animation-delay:.05s}.hero .role{animation-delay:.6s}.hero .sum{animation-delay:.75s}.actions{animation-delay:.9s}.social{animation-delay:1.05s}
-@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
-.pill i{animation:ping 2s ease-out infinite}
-@keyframes ping{0%{box-shadow:0 0 0 0 rgba(61,220,132,.6)}100%{box-shadow:0 0 0 12px rgba(61,220,132,0)}}
-.caret{display:inline-block;width:3px;height:1.1em;margin-left:4px;background:var(--cyan);vertical-align:-.15em;animation:blink 1s steps(1) infinite}
-@keyframes blink{50%{opacity:0}}
-.hero .role{min-height:1.6em}
-
-.photo{opacity:0;animation:pop 1.1s .35s cubic-bezier(.2,.85,.2,1) forwards;transition:translate .25s ease-out,rotate .25s ease-out}
-@keyframes pop{from{opacity:0;transform:translateY(40px) scale(.92)}to{opacity:1;transform:none}}
-.photo::before{content:"";position:absolute;inset:-18px;border-radius:70px;background:conic-gradient(from var(--a),#22C1FF,transparent 28%,#3DDC84 52%,transparent 74%,#22C1FF);filter:blur(22px);opacity:.75;animation:spin 7s linear infinite}
-@keyframes spin{to{--a:360deg}}
-.photo .frame{position:relative;z-index:1}
-.chip{z-index:2;animation:float 5s ease-in-out infinite}
-.chip.b{animation-delay:-2.5s}
-@keyframes float{50%{transform:translateY(-12px)}}
-
-.btn{position:relative;overflow:hidden}
-.btn::after{content:"";position:absolute;top:0;left:-70%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);animation:shine 4.5s 2s infinite}
-@keyframes shine{0%,60%{left:-70%}100%{left:130%}}
-.logo{transition:transform .25s cubic-bezier(.3,1.6,.5,1)}
-a:hover>.logo{transform:translateY(-6px) rotate(-6deg) scale(1.08)}
-
-.marquee{position:relative;z-index:3;overflow:hidden;background:var(--cyan);color:#04202E;padding:17px 0;transform:rotate(-1.4deg);margin:-52px -24px 0;box-shadow:0 18px 40px rgba(6,20,31,.18)}
-.track{display:flex;width:max-content;animation:scroll 32s linear infinite}
-.track span{font-family:var(--head);font-weight:700;font-size:1.15rem;white-space:nowrap;padding-right:34px}
-.track span::after{content:"\2726";margin-left:34px;color:var(--navy)}
-.marquee:hover .track{animation-play-state:paused}
-@keyframes scroll{to{transform:translateX(-50%)}}
-
-/* scroll reveal (only when JS is running) */
-.js .rv{opacity:0;transform:translateY(34px) scale(.98);transition:opacity .8s cubic-bezier(.2,.85,.2,1),transform .8s cubic-bezier(.2,.85,.2,1)}
-.js .rv.in{opacity:1;transform:none}
-.sh h2::after{content:"";display:block;height:5px;width:72px;border-radius:4px;background:linear-gradient(90deg,var(--blue),var(--cyan));margin-top:14px;transition:width .9s .25s cubic-bezier(.2,.85,.2,1)}
-.js .sh:not(.in) h2::after{width:0}
-.js .chips span{opacity:0;transform:scale(.8);transition:opacity .4s,transform .45s cubic-bezier(.3,1.6,.5,1)}
-.js .card.in .chips span{opacity:1;transform:none}
-.job li{transition:background .2s,padding-left .2s}
-.job li:hover{padding-left:32px;color:var(--navy)}
-.job li:hover::before{transform:scale(1.4)}
-.job li::before{transition:transform .2s}
-.card{transition:opacity .8s cubic-bezier(.2,.85,.2,1),transform .25s ease-out,box-shadow .25s,border-color .25s}
-.js .card.in:hover{box-shadow:0 24px 50px rgba(11,37,54,.14);border-color:#B7CBDA}
-.chips span{transition:background .2s,color .2s,transform .2s}
-.chips span:hover{background:var(--navy);color:#fff;transform:translateY(-3px)}
-.contact{position:relative;overflow:hidden}
-.contact::before{content:"";position:absolute;inset:0;background:radial-gradient(420px circle at var(--mx,80%) var(--my,10%),rgba(34,193,255,.22),transparent 60%);pointer-events:none;transition:background .1s}
-.contact>*{position:relative}
-.link .ico{transition:background .2s,transform .3s}
-.link:hover .ico{background:var(--cyan);color:#04202E;transform:rotate(-8deg)}
-
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important}
-  .hero h1 .w>span,.pill,.hero .role,.hero .sum,.actions,.social,.photo{opacity:1!important;transform:none!important}
-  .js .rv,.js .chips span{opacity:1!important;transform:none!important}
-  .js .sh:not(.in) h2::after{width:72px}
-}
-@media (max-width:860px){.marquee{margin-top:-40px}.hero{padding-bottom:110px}}
-
-/* ---------- extra motion ---------- */
-.loader{display:none}
-.js .loader{display:grid;position:fixed;inset:0;z-index:100;place-items:center;text-align:center;background:var(--deep);color:#fff;transition:transform .9s cubic-bezier(.76,0,.24,1)}
-.loader.done{transform:translateY(-100%)}
-.loader b{display:block;font-family:var(--head);font-size:clamp(3.4rem,12vw,6.5rem);font-weight:800;letter-spacing:-.04em;animation:up .8s both}
-.loader .ln{width:min(260px,60vw);height:4px;margin:14px auto 16px;background:rgba(255,255,255,.15);border-radius:4px;overflow:hidden}
-.loader .ln i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--cyan));animation:load 1.1s .1s cubic-bezier(.6,0,.2,1) forwards}
-.loader small{color:#9FC1D4;letter-spacing:.04em}
-@keyframes load{to{width:100%}}
-.js:not(.ready) :is(.hero h1 .w>span,.pill,.hero .role,.hero .sum,.actions,.social,.photo){animation-play-state:paused}
-
-#net{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
-.blob{translate:0 var(--py,0px)}
-
-.orbit{position:absolute;left:50%;top:50%;width:136%;aspect-ratio:1;margin:-68% 0 0 -68%;border-radius:50%;border:1.5px dashed rgba(255,255,255,.2);animation:turn 22s linear infinite;pointer-events:none}
-.orbit::before,.orbit::after{content:"";position:absolute;width:16px;height:16px;border-radius:50%}
-.orbit::before{top:-8px;left:50%;background:var(--cyan);box-shadow:0 0 18px 4px rgba(34,193,255,.7)}
-.orbit::after{bottom:14%;left:7%;background:#3DDC84;box-shadow:0 0 18px 4px rgba(61,220,132,.6)}
-@keyframes turn{to{transform:rotate(360deg)}}
-
-.btn.wa{animation:wapulse 2.4s 2s infinite}
-@keyframes wapulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}70%,100%{box-shadow:0 0 0 16px rgba(37,211,102,0)}}
-
-.card{position:relative}
-.card::before{content:"";position:absolute;inset:-1px;border-radius:25px;padding:2px;pointer-events:none;opacity:0;transition:opacity .3s;background:conic-gradient(from var(--a),transparent 0 62%,var(--cyan) 85%,#3DDC84);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);animation:spin 3s linear infinite}
-.card:hover::before{opacity:1}
-
-.cur-ring,.cur-dot{display:none;position:fixed;left:0;top:0;z-index:90;pointer-events:none;border-radius:50%}
-.has-cursor .cur-ring,.has-cursor .cur-dot{display:block}
-.cur-ring{width:38px;height:38px;margin:-19px 0 0 -19px;border:2px solid var(--cyan);transition:width .25s,height .25s,margin .25s,background .25s,border-color .25s}
-.cur-dot{width:8px;height:8px;margin:-4px 0 0 -4px;background:var(--cyan)}
-.cur-ring.big{width:66px;height:66px;margin:-33px 0 0 -33px;background:rgba(34,193,255,.16)}
-.js .sh h2{min-height:1.1em}
-
-@media (prefers-reduced-motion:reduce){.js .loader,.cur-ring,.cur-dot,#net{display:none!important}}
-
-/* ---------- inventory-themed motion ---------- */
-.scan{position:absolute;left:0;right:0;top:0;height:3px;z-index:3;background:#3DDC84;box-shadow:0 0 18px 6px rgba(61,220,132,.75);opacity:0;animation:scan 5s 3.2s ease-in-out infinite}
-@keyframes scan{0%{top:0;opacity:0}6%{opacity:1}46%{top:calc(100% - 3px);opacity:1}52%,100%{top:calc(100% - 3px);opacity:0}}
-.sku{position:absolute;left:50%;bottom:18px;z-index:3;white-space:nowrap;padding:8px 14px;border-radius:999px;background:rgba(6,20,31,.88);color:#7DF0B0;font-weight:700;font-size:.85rem;opacity:0;transform:translate(-50%,12px);animation:sku 5s 3.2s ease-in-out infinite}
-@keyframes sku{0%,46%{opacity:0;transform:translate(-50%,12px)}54%,86%{opacity:1;transform:translate(-50%,0)}96%,100%{opacity:0;transform:translate(-50%,-6px)}}
-
-.flow{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:30px 30px 0;overflow:hidden}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.step{padding:18px;border-radius:18px;border:1px solid var(--line);animation:lit 8s linear infinite;transition:background .2s}
-.step:nth-child(2){animation-delay:2s}.step:nth-child(3){animation-delay:4s}.step:nth-child(4){animation-delay:6s}
-.step b{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;font-family:var(--head);margin-bottom:12px;animation:litb 8s linear infinite;animation-delay:inherit}
-.step h3{font-size:1.1rem;color:var(--navy);margin-bottom:4px}
-.step p{color:var(--muted);font-size:.97rem;line-height:1.45}
-@keyframes lit{0%,24%{background:#E2F5FF;border-color:var(--cyan);transform:translateY(-6px);box-shadow:0 16px 30px rgba(34,193,255,.25)}28%,100%{background:#fff;border-color:var(--line);transform:none;box-shadow:none}}
-@keyframes litb{0%,24%{background:var(--cyan);color:#04202E;transform:scale(1.15)}28%,100%{background:var(--navy);color:#fff;transform:none}}
-.line{position:relative;height:96px;margin-top:22px}
-.belt{position:absolute;left:-30px;right:-30px;bottom:0;height:20px;border-radius:10px;background:repeating-linear-gradient(90deg,#0B2536 0 22px,#16465F 22px 44px);animation:belt .9s linear infinite}
-@keyframes belt{to{background-position:44px 0}}
-.box{position:absolute;bottom:20px;left:-70px;width:56px;height:44px;border-radius:6px;background:linear-gradient(#35CDFF,#0A8FD0);box-shadow:inset 0 0 0 2px rgba(255,255,255,.25);animation:ride 8s linear infinite}
-.box::after{content:"";position:absolute;left:50%;top:0;bottom:0;width:8px;margin-left:-4px;background:rgba(255,255,255,.4)}
-.box.s2{width:44px;height:58px;animation-delay:-2.7s;background:linear-gradient(#58E39A,#1E9F5E)}
-.box.s3{width:64px;height:36px;animation-delay:-5.4s;background:linear-gradient(#7C9CB4,#4B6C86)}
-@keyframes ride{from{left:-70px}to{left:calc(100% + 10px)}}
-
-.sphere-card{background:radial-gradient(500px 260px at 50% 40%,rgba(34,193,255,.2),transparent 70%),var(--deep);border-color:#17384C;padding:0;margin-bottom:20px;overflow:hidden}
-.sphere-card:hover::before{opacity:0}
-#sphere{position:relative;height:420px;cursor:grab}
-#sphere span{position:absolute;left:50%;top:50%;white-space:nowrap;color:#fff;font-family:var(--head);font-weight:700;will-change:transform,opacity;pointer-events:none}
-.jobs .card,.skills .card{background-image:radial-gradient(320px circle at var(--gx,50%) var(--gy,-60%),rgba(34,193,255,.13),transparent 60%)}
-@media (max-width:860px){.steps{grid-template-columns:1fr 1fr}#sphere{height:340px}}
-@media (max-width:480px){.steps{grid-template-columns:1fr}}
-
-/* ---------- path, trail, burst, giant text ---------- */
-.road{padding:28px 28px 22px}
-.road svg{width:100%;height:auto;overflow:visible}
-.road .wheel{animation:wspin 1s linear infinite;transform-box:fill-box;transform-origin:center}
-@keyframes wspin{to{rotate:360deg}}
-#truck{filter:drop-shadow(0 6px 8px rgba(11,37,54,.25))}
-.stn{fill:#fff;stroke:#B7CBDA;stroke-width:6;transition:fill .3s,stroke .3s,r .3s}
-.stn.on{fill:#22C1FF;stroke:#0A6AA1}
-.stops{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:6px}
-.stops div{padding:14px 16px;border-radius:16px;background:var(--bg);border:1px solid var(--line);opacity:.55;transition:opacity .4s,background .4s,transform .4s}
-.stops div.on{opacity:1;background:#E2F5FF;border-color:var(--cyan);transform:translateY(-4px)}
-.stops b{display:block;font-family:var(--head);color:var(--navy)}
-.stops span{color:var(--muted);font-size:.95rem}
-.stops .nx.on{background:var(--navy);border-color:var(--navy)}
-.stops .nx.on b,.stops .nx.on span{color:#fff}
-.stops .nx.on{animation:ping2 1.8s infinite}
-@keyframes ping2{0%{box-shadow:0 0 0 0 rgba(34,193,255,.55)}100%{box-shadow:0 0 0 18px rgba(34,193,255,0)}}
-#trail{position:fixed;inset:0;width:100%;height:100%;z-index:85;pointer-events:none}
-.crate{position:fixed;width:14px;height:12px;border-radius:3px;z-index:95;pointer-events:none;background:linear-gradient(#35CDFF,#0A8FD0);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.4);animation:burst .95s cubic-bezier(.2,.7,.3,1) forwards}
-.crate:nth-child(3n){background:linear-gradient(#58E39A,#1E9F5E)}
-@keyframes burst{to{transform:translate(var(--dx),var(--dy)) rotate(var(--r));opacity:0}}
-.giant{overflow:hidden;margin-top:70px;padding:10px 0}
-.gt{display:flex;width:max-content;animation:scroll 46s linear infinite reverse}
-.gt span{font-family:var(--head);font-weight:800;font-size:clamp(2.6rem,8vw,6.5rem);white-space:nowrap;padding-right:.6em;color:transparent;-webkit-text-stroke:2px rgba(11,37,54,.28);transition:color .3s}
-.gt span::after{content:"\2726";margin-left:.6em;-webkit-text-stroke:0;color:var(--cyan)}
-.giant:hover .gt span{color:rgba(34,193,255,.18)}
-.giant:hover .gt{animation-play-state:paused}
-footer{padding-top:8px}
-@media (max-width:860px){.stops{grid-template-columns:1fr}}
-@media (prefers-reduced-motion:reduce){#trail{display:none!important}}
+:root{--bg:#f6f4ee;--ink:#1d2b28;--mut:#66726f;--line:#d9d5c8;--brand:#17594a;--brand2:#e9f1ee;--err:#b3261e;--card:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#141a18;--ink:#e8eeeb;--mut:#92a09b;--line:#2c3935;--brand:#5fb59e;--brand2:#1d2b27;--err:#f2b8b5;--card:#1b2320}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Segoe UI",system-ui,"Noto Sans Bengali",sans-serif}
+header{padding:18px 16px 8px;max-width:760px;margin:auto}
+h1{margin:0;font-size:22px}
+header p{margin:2px 0 0;color:var(--mut);font-size:14px}
+nav{display:flex;gap:6px;overflow-x:auto;padding:10px 16px;max-width:760px;margin:auto}
+nav button{flex:none;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:9px 14px;border-radius:8px;font:inherit;font-size:14px;cursor:pointer}
+nav button.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+main{max-width:760px;margin:auto;padding:0 16px 40px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-top:8px}
+label{display:block;font-size:14px;color:var(--mut);margin:12px 0 4px}
+input,select,textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit;background:var(--bg);color:var(--ink)}
+input:focus,select:focus,textarea:focus,button:focus-visible{outline:2px solid var(--brand);outline-offset:1px}
+.save{margin-top:16px;width:100%;padding:12px;border:0;border-radius:8px;background:var(--brand);color:#fff;font:inherit;font-weight:600;cursor:pointer}
+.save:disabled{opacity:.6}
+.calc{margin-top:12px;padding:10px;border-radius:8px;background:var(--brand2);font-size:14px}
+#msg{margin-top:10px;font-size:14px;min-height:20px}
+#msg.err,#lmsg{color:var(--err)}
+.tbl{overflow-x:auto;margin-top:10px}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;white-space:nowrap}
+h2{font-size:16px;margin:22px 0 0}
+#lock{max-width:320px;margin:60px auto;padding:16px}
 </style>
 </head>
 <body>
-<canvas id="trail" aria-hidden="true"></canvas>
-<div class="loader" aria-hidden="true"><div><b>SAS</b><div class="ln"><i></i></div><small>Inventory and operations</small></div></div>
-<div class="cur-ring" aria-hidden="true"></div><div class="cur-dot" aria-hidden="true"></div>
-<div class="progress" aria-hidden="true"></div>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
-  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m4 8 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
-  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="l-wa" viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="#25D366"/><path d="M24 9.5a14.5 14.5 0 0 0-12.4 22L9.5 38.5l7.2-2A14.5 14.5 0 1 0 24 9.5z" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><path d="M18.2 17c-.7.7-1.2 1.7-.6 3.1 1.2 3 4.2 6 7.2 7.2 1.5.6 2.6 0 3.2-.8.5-.7.5-1.4.2-1.7l-2.6-1.3c-.4-.2-.8 0-1.1.3l-.8 1c-1.7-.8-3.2-2.3-4-4l1-.8c.3-.3.5-.7.3-1.1l-1.3-2.6c-.4-.4-1.1-.3-1.5.1z" fill="#fff"/></symbol>
-  <symbol id="l-fb" viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="#1877F2"/><path d="M26.5 40V26h4.7l.8-5.5h-5.5v-3.4c0-1.6.7-2.8 2.9-2.8H32V9.5c-.5-.1-2.3-.3-4.2-.3-4.4 0-7.3 2.7-7.3 7.5v3.8H16V26h4.5v14z" fill="#fff"/></symbol>
-  <symbol id="l-in" viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="#0A66C2"/><rect x="11" y="19" width="5.5" height="17" fill="#fff"/><circle cx="13.75" cy="13.5" r="3.3" fill="#fff"/><path d="M21 19h5.2v2.4c.8-1.5 2.7-2.8 5.4-2.8 5.3 0 6.4 3.5 6.4 8V36h-5.5v-8.2c0-2-.1-4.4-2.8-4.4s-3.2 2.1-3.2 4.3V36H21z" fill="#fff"/></symbol>
-</svg>
+<div id="lock" class="card">
+  <h1>Liz Daily Accounts</h1>
+  <label for="pin">PIN</label>
+  <input id="pin" type="password" inputmode="numeric" autocomplete="off">
+  <button class="save" id="enter">Dhukun</button>
+  <div id="lmsg" style="margin-top:8px;font-size:14px"></div>
+</div>
 
-<nav class="nav" aria-label="Main">
-  <a href="#about">About</a>
-  <a href="#process">Process</a>
-  <a href="#experience">Experience</a>
-  <a href="#path">Path</a>
-  <a href="#skills">Skills</a>
-  <a href="#education">Education</a>
-  <a class="cta" href="#contact">Contact</a>
-</nav>
-
-<main>
-<header class="hero">
-  <canvas id="net" aria-hidden="true"></canvas>
-  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
-  <div class="wrap">
-    <div>
-      <span class="pill"><i></i>Open to inventory and operations roles</span>
-      <h1 aria-label="Sohan Ali Sikder"><span class="w"><span>Sohan</span></span> <span class="w"><span>Ali</span></span> <span class="w"><span>Sikder</span></span></h1>
-      <p class="role"><span id="type">Inventory and operations executive</span><span class="caret" aria-hidden="true"></span></p>
-      <p class="sum">Two years of shop, stock and team work at Apon Tech Ltd. I am looking for an inventory or operations role in a garments factory in Bangladesh.</p>
-      <div class="actions">
-        <a class="btn wa" href="https://wa.me/8801729948649" target="_blank" rel="noopener noreferrer"><svg><use href="#i-phone"/></svg>Message on WhatsApp</a>
-        <!-- Download CV: opens the Google Drive link in a new tab -->
-        <a class="btn" href="https://drive.google.com/file/d/16CjDf6xMueUT4dmRH0moEQVmw54vzSJg/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><svg><use href="#i-down"/></svg>Download CV</a>
-      </div>
-      <div class="social">
-        <span>Find me on</span>
-        <a href="https://wa.me/8801729948649" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg class="logo"><use href="#l-wa"/></svg></a>
-        <a href="https://www.facebook.com/TheSohanSaga/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg class="logo"><use href="#l-fb"/></svg></a>
-        <a href="https://www.linkedin.com/in/suhan-ali-bb3a14324" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="logo"><use href="#l-in"/></svg></a>
-      </div>
+<div id="app" hidden>
+  <header><h1>Liz Fashion – Daily Accounts</h1><p>Ekhane entry dile sheet-e sathe sathe add hobe.</p></header>
+  <nav id="tabs"></nav>
+  <main>
+    <div class="card">
+      <div id="fields"></div>
+      <div id="calc" class="calc" hidden></div>
+      <button class="save" id="save">Save korun</button>
+      <div id="msg" role="status"></div>
     </div>
-    <div class="photo">
-      <div class="orbit" aria-hidden="true"></div>
-      <div class="frame"><img src="photo.jpg" alt="Portrait of Sohan Ali Sikder" width="380" height="475"><div class="scan"></div><div class="sku">Scan complete · Ready to work</div></div>
-      <div class="chip a"><b>2 years</b>at Apon Tech Ltd.</div>
-      <div class="chip b"><b>B.S.S.</b>final year student</div>
-    </div>
-  </div>
-</header>
-
-<div class="marquee" aria-hidden="true"><div class="track">
-  <span>Inventory management</span><span>Stock management</span><span>Store operations</span><span>Team coordination</span><span>POS / ERP</span><span>Sales reporting</span><span>Time management</span><span>Customer service</span>
-  <span>Inventory management</span><span>Stock management</span><span>Store operations</span><span>Team coordination</span><span>POS / ERP</span><span>Sales reporting</span><span>Time management</span><span>Customer service</span>
-</div></div>
-
-<section id="about">
-  <div class="wrap">
-    <div class="sh"><h2>About me</h2></div>
-    <div class="about">
-      <div class="card"><p class="big">I am a dedicated professional with hands-on experience in inventory handling, stock management, team coordination and daily operations. I want to apply these skills in a reputable garments factory, support smooth operations and grow with the organization.</p></div>
-      <div class="stats">
-        <div class="stat"><b><span data-count="2">2</span> years</b><span>Retail and store work</span></div>
-        <div class="stat"><b><span data-count="2">2</span> roles</b><span>Same company</span></div>
-        <div class="stat"><b>POS / ERP</b><span>Used in daily work</span></div>
-        <div class="stat"><b>Bangla, English</b><span>Languages</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="process">
-  <div class="wrap">
-    <div class="sh"><h2>How I work</h2><p>The daily flow of my shop and stock work, from the delivery to the customer.</p></div>
-    <div class="flow">
-      <div class="steps">
-        <div class="step"><b>1</b><h3>Receive and stock</h3><p>Product stocking and inventory activities</p></div>
-        <div class="step"><b>2</b><h3>Organize</h3><p>Products, displays and storage areas kept in order</p></div>
-        <div class="step"><b>3</b><h3>Monitor</h3><p>Stock levels checked so products stay available</p></div>
-        <div class="step"><b>4</b><h3>Sell and serve</h3><p>Sales, customer service and POS / ERP reporting</p></div>
-      </div>
-      <div class="line" aria-hidden="true"><i class="box"></i><i class="box s2"></i><i class="box s3"></i><div class="belt"></div></div>
-    </div>
-  </div>
-</section>
-
-<section id="experience">
-  <div class="wrap">
-    <div class="sh"><h2>Work experience</h2><p>Two roles at Apon Tech Ltd., from shop executive to assistant shop in-charge.</p></div>
-    <div class="jobs">
-      <article class="card job">
-        <h3>Assistant Shop In-Charge</h3>
-        <div class="meta"><span class="tag">Apon Tech Ltd.</span><span class="tag">1 year</span></div>
-        <ul>
-          <li>Supported day-to-day operations and coordinated with team members</li>
-          <li>Monitored inventory and stock levels to maintain availability</li>
-          <li>Used POS / ERP systems for daily work and sales reporting</li>
-          <li>Arranged and organized products and supported merchandising</li>
-          <li>Handled sales and delivered customer service</li>
-        </ul>
-      </article>
-      <article class="card job">
-        <h3>Shop Executive</h3>
-        <div class="meta"><span class="tag">Apon Tech Ltd.</span><span class="tag">1 year</span></div>
-        <ul>
-          <li>Carried out product stocking and inventory activities</li>
-          <li>Maintained organized product displays and storage areas</li>
-          <li>Supported day-to-day shop operations</li>
-          <li>Handled retail sales and provided customer service</li>
-          <li>Assisted customers in selecting suitable products</li>
-        </ul>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="path">
-  <div class="wrap">
-    <div class="sh"><h2>Career path</h2><p>From shop executive to assistant shop in-charge. The next stop is your factory.</p></div>
-    <div class="card road">
-      <svg viewBox="0 0 1000 250" role="img" aria-label="Career path: Shop Executive, Assistant Shop In-Charge, then your factory">
-        <path id="rd" d="M40 180 C200 40 340 40 490 130 S780 230 960 80" fill="none" stroke="#CFDBE4" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 18"/>
-        <path id="rp" d="M40 180 C200 40 340 40 490 130 S780 230 960 80" fill="none" stroke="url(#rg)" stroke-width="10" stroke-linecap="round"/>
-        <defs><linearGradient id="rg" x1="0" x2="1"><stop offset="0" stop-color="#0A6AA1"/><stop offset="1" stop-color="#22C1FF"/></linearGradient></defs>
-        <g id="stn"></g>
-        <g id="truck"><rect x="-36" y="-30" width="46" height="28" rx="4" fill="#22C1FF"/><path d="M10 -22h15l9 11v9H10z" fill="#0A6AA1"/><rect x="-28" y="-24" width="30" height="5" rx="2" fill="#fff" opacity=".5"/>
-          <g class="wheel" transform="translate(-20 0)"><circle r="8" fill="#06141F" stroke="#fff" stroke-width="2.5"/><path d="M-6 0h12M0 -6v12" stroke="#fff" stroke-width="2"/></g>
-          <g class="wheel" transform="translate(22 0)"><circle r="8" fill="#06141F" stroke="#fff" stroke-width="2.5"/><path d="M-6 0h12M0 -6v12" stroke="#fff" stroke-width="2"/></g></g>
-      </svg>
-      <div class="stops">
-        <div><b>Shop Executive</b><span>Apon Tech Ltd. | 1 year</span></div>
-        <div><b>Assistant Shop In-Charge</b><span>Apon Tech Ltd. | 1 year</span></div>
-        <div class="nx"><b>Your factory</b><span>Inventory and operations</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="skills">
-  <div class="wrap">
-    <div class="sh"><h2>Skills</h2></div>
-    <div class="card sphere-card"><div id="sphere" aria-label="Skills: inventory management, stock management, store operations, team coordination, POS / ERP, sales reporting, time management, communication, customer service, merchandising, Microsoft Excel, Microsoft Word"></div></div>
-    <div class="skills">
-      <div class="card"><h3>Inventory and store</h3><div class="chips"><span>Inventory management</span><span>Stock management</span><span>Store operations</span><span>Product merchandising</span></div></div>
-      <div class="card"><h3>People and sales</h3><div class="chips"><span>Team coordination</span><span>Time management</span><span>Communication skills</span><span>Sales and customer service</span></div></div>
-      <div class="card"><h3>Systems</h3><div class="chips"><span>POS / ERP</span><span>Microsoft Excel <small>basic</small></span><span>Microsoft Word <small>basic</small></span><span>Sales reporting</span></div></div>
-    </div>
-  </div>
-</section>
-
-<section id="education">
-  <div class="wrap">
-    <div class="sh"><h2>Education</h2></div>
-    <div class="edu">
-      <div class="card"><h3>B.S.S. (final year)</h3><p>Bhawal Badre Alam Government College</p><p class="when">Session 2021 to 2022</p></div>
-      <div class="card"><h3>HSC, Humanities</h3><p>North Laskarcala High School and College</p><p class="when">2021 | GPA 4.25</p></div>
-      <div class="card"><h3>SSC, Science</h3><p>Mazukhan High School</p><p class="when">2019 | GPA 3.78</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="wrap">
-    <div class="contact">
-      <div>
-        <h2>Let's talk about your next opening</h2>
-        <p>If your factory or company needs someone for inventory, store or operations work, call or write to me. I reply in Bangla or English.</p>
-        <a class="btn wa" href="https://wa.me/8801729948649" target="_blank" rel="noopener noreferrer"><svg><use href="#i-phone"/></svg>Message on WhatsApp</a>
-      </div>
-      <div class="links">
-        <a class="link" href="tel:+8801729948649"><span class="ico"><svg><use href="#i-phone"/></svg></span><span><small>Phone / WhatsApp</small><b>01729948649</b></span></a>
-        <a class="link" href="mailto:sohanbdt.1@gmail.com"><span class="ico"><svg><use href="#i-mail"/></svg></span><span><small>Email</small><b>sohanbdt.1@gmail.com</b></span></a>
-        <a class="link" href="https://www.facebook.com/TheSohanSaga/" target="_blank" rel="noopener noreferrer"><svg class="logo"><use href="#l-fb"/></svg><span><small>Social</small><b>Facebook</b></span></a>
-        <a class="link" href="https://www.linkedin.com/in/suhan-ali-bb3a14324" target="_blank" rel="noopener noreferrer"><svg class="logo"><use href="#l-in"/></svg><span><small>Professional</small><b>LinkedIn</b></span></a>
-        <div class="link static"><span class="ico"><svg><use href="#i-pin"/></svg></span><span><small>Location</small><b>Gazipur, Bangladesh</b></span></div>
-      </div>
-    </div>
-  </div>
-</section>
-</main>
-
-<div class="giant" aria-hidden="true"><div class="gt"><span>Available for inventory and operations roles</span><span>Available for inventory and operations roles</span><span>Available for inventory and operations roles</span><span>Available for inventory and operations roles</span></div></div>
-<footer>&copy; 2026 Sohan Ali Sikder</footer>
+    <h2>Sesh 10 ti entry</h2>
+    <div class="tbl" id="recent"></div>
+  </main>
+</div>
 
 <script>
-(function(){
-  var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var fine=window.matchMedia("(hover:hover) and (pointer:fine)").matches;
-  document.documentElement.classList.add("js");
+// ===== EKHANE APNAR WEB APP URL BOSHAN (Deploy korar por pabe) =====
+const APP_URL = 'https://script.google.com/macros/s/AKfycbxd8zXJAlK0SV6vv5B05mQ3lxjJQ2Rkr0MT6Koxe9jbGbPVaEJjClcxV1BPGzxQpBS-FQ/exec';
+// ====================================================================
 
-  /* scroll progress */
-  var bar=document.querySelector(".progress");
-  function prog(){var h=document.documentElement;var m=h.scrollHeight-h.clientHeight;bar.style.width=(m>0?h.scrollTop/m*100:0)+"%"}
-  addEventListener("scroll",prog,{passive:true});prog();
+const F = {
+  expense:{title:'Expense',fields:[
+    ['date','Tarikh','date'],['name','Expense name','text'],['note','Note / karon','textarea'],
+    ['amount','Amount (tk)','number'],['code','Expense code (IE...)','text'],
+    ['status','Status','select',['entry done','pending','approved']]]},
+  cash:{title:'Cash In / Out',fields:[
+    ['date','Tarikh','date'],['kind','Dhoron','select',['Cash In','Cash Out']],
+    ['note','Note','text'],['amount','Amount (tk)','number']]},
+  recovery:{title:'Recovery',fields:[
+    ['date','Tarikh','date'],['custId','Customer ID','text'],['custName','Customer name','text'],
+    ['amount','Amount (tk)','number'],['exchange','Exchange with cash','number'],['remarks','Remarks','text']]},
+  baki:{title:'Baki taka pabo',fields:[
+    ['date','Tarikh','date'],['name','Customer name + ID','text'],['amount','Amount (tk)','number'],
+    ['reason','Karon','textarea']]},
+  daily:{title:'Daily Cash Summary',fields:[
+    ['date','Tarikh','date'],['prev','Previous Ledger','number'],['ibos','IBOS Cash Sales','number'],
+    ['recov','Recovery Sales','number'],['cashin','Cash In','number'],['expense','Expense','number'],
+    ['cashout','Cash Out','number'],['cod','COD','number']]}
+};
+let cur='expense', PIN='';
+const $=id=>document.getElementById(id);
+const today=()=>{const d=new Date();return new Date(d-d.getTimezoneOffset()*6e4).toISOString().slice(0,10)};
 
-  /* reveal with stagger */
-  var items=document.querySelectorAll(".sh,.card,.stat,.link");
-  items.forEach(function(el){
-    el.classList.add("rv");
-    var sib=Array.prototype.indexOf.call(el.parentNode.children,el);
-    el.style.transitionDelay=(Math.min(sib,5)*90)+"ms";
+async function call(action,type,d){
+  const r=await fetch(APP_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},
+    body:JSON.stringify({action,type,d,pin:PIN})});
+  const j=await r.json();
+  if(!j.ok)throw new Error(j.error||'Error');
+  return j.data;
+}
+function say(t,err){const m=$('msg');m.textContent=t;m.className=err?'err':''}
+
+function tabs(){
+  $('tabs').innerHTML='';
+  Object.keys(F).forEach(k=>{
+    const b=document.createElement('button');b.textContent=F[k].title;
+    if(k===cur)b.className='on';
+    b.onclick=()=>{cur=k;tabs();form();recent()};
+    $('tabs').appendChild(b);
   });
-  var chipDelay=function(card){card.querySelectorAll(".chips span").forEach(function(c,i){c.style.transitionDelay=(250+i*70)+"ms"})};
-  document.querySelectorAll(".card").forEach(chipDelay);
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){
-    if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);
-      e.target.querySelectorAll("[data-count]").forEach(count);
-      if(e.target.hasAttribute("data-count"))count(e.target);}
-  })},{threshold:.15,rootMargin:"0px 0px -40px 0px"});
-  items.forEach(function(el){io.observe(el)});
-
-  /* counters */
-  function count(el){
-    var to=+el.getAttribute("data-count");if(reduce){el.textContent=to;return}
-    var t0=performance.now(),d=1300;
-    (function step(t){var p=Math.min((t-t0)/d,1);el.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)})(t0);
-  }
-  document.querySelectorAll("[data-count]").forEach(function(el){if(!reduce)el.textContent="0"});
-
-  /* typing role */
-  var out=document.getElementById("type");
-  var words=["Inventory and operations executive","Stock and store management","Team coordination","POS / ERP in daily work"];
-  if(out&&!reduce){
-    var w=0,c=words[0].length,del=true;
-    setTimeout(function tick(){
-      var word=words[w];
-      if(del){c--;if(c<=0){del=false;w=(w+1)%words.length}}else{c++;if(c>=words[w].length)del=true}
-      out.textContent=words[w].slice(0,Math.max(c,0));
-      var wait=del&&c===words[w].length-0?1800:(del?35:70);
-      if(!del&&c>=words[w].length)wait=2000;
-      setTimeout(tick,wait);
-    },2400);
-  }
-
-  /* nav highlight */
-  var links=[].slice.call(document.querySelectorAll(".nav a"));
-  var secs=links.map(function(a){return document.querySelector(a.getAttribute("href"))});
-  var so=new IntersectionObserver(function(es){es.forEach(function(e){
-    if(e.isIntersecting){links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id)})}
-  })},{rootMargin:"-45% 0px -50% 0px"});
-  secs.forEach(function(s){if(s)so.observe(s)});
-
-  if(reduce||!fine)return;
-
-  /* tilt on cards */
-  document.querySelectorAll(".edu .card,.skills .card,.jobs .card").forEach(function(card){
-    card.addEventListener("mousemove",function(e){
-      var r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
-      card.style.setProperty("--gx",(x+.5)*100+"%");card.style.setProperty("--gy",(y+.5)*100+"%");card.style.transform="perspective(900px) rotateY("+(x*6)+"deg) rotateX("+(-y*6)+"deg) translateY(-4px)";
-    });
-    card.addEventListener("mouseleave",function(){card.style.transform=""});
+}
+function form(){
+  const box=$('fields');box.innerHTML='';say('');
+  F[cur].fields.forEach(([id,lab,type,opts])=>{
+    const l=document.createElement('label');l.htmlFor='f_'+id;l.textContent=lab;box.appendChild(l);
+    let el;
+    if(type==='select'){el=document.createElement('select');opts.forEach(o=>{const op=document.createElement('option');op.textContent=o;el.appendChild(op)})}
+    else if(type==='textarea'){el=document.createElement('textarea');el.rows=2}
+    else{el=document.createElement('input');el.type=type;if(type==='number'){el.inputMode='decimal';el.step='any'}}
+    el.id='f_'+id;if(type==='date')el.value=today();
+    el.oninput=calc;box.appendChild(el);
   });
-  /* photo parallax */
-  var ph=document.querySelector(".photo");
-  document.querySelector(".hero").addEventListener("mousemove",function(e){
-    var x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;
-    ph.style.translate=(x*18)+"px "+(y*14)+"px";ph.style.rotate=(x*2)+"deg";
-  });
-  /* magnetic buttons */
-  document.querySelectorAll(".btn").forEach(function(b){
-    b.addEventListener("mousemove",function(e){var r=b.getBoundingClientRect();b.style.transform="translate("+((e.clientX-r.left-r.width/2)*.15)+"px,"+((e.clientY-r.top-r.height/2)*.25)+"px)"});
-    b.addEventListener("mouseleave",function(){b.style.transform=""});
-  });
-  /* contact spotlight */
-  var ct=document.querySelector(".contact");
-  ct.addEventListener("mousemove",function(e){var r=ct.getBoundingClientRect();ct.style.setProperty("--mx",(e.clientX-r.left)+"px");ct.style.setProperty("--my",(e.clientY-r.top)+"px")});
-})();
-</script>
-
-<script>
-(function(){
-  var reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var fine=matchMedia("(hover:hover) and (pointer:fine)").matches;
-  var root=document.documentElement;
-
-  /* preloader, then start hero sequence */
-  var loader=document.querySelector(".loader"),started=false;
-  function start(){
-    if(started)return;started=true;
-    if(loader&&!reduce){loader.classList.add("done");setTimeout(function(){root.classList.add("ready")},450);setTimeout(function(){loader.style.display="none"},1100)}
-    else{root.classList.add("ready");if(loader)loader.style.display="none"}
-  }
-  if(reduce)start();else{addEventListener("load",function(){setTimeout(start,1300)});setTimeout(start,3200)}
-
-  if(reduce)return;
-
-  /* particle network in hero */
-  var cv=document.getElementById("net"),hero=document.querySelector(".hero");
-  if(cv&&cv.getContext){
-    var cx=cv.getContext("2d"),W=0,H=0,dpr=Math.min(devicePixelRatio||1,2),pts=[],mouse={x:-999,y:-999},run=true;
-    function size(){W=hero.clientWidth;H=hero.clientHeight;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0);
-      var n=Math.round(Math.min(70,W/18));pts=[];
-      for(var i=0;i<n;i++)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,r:1.2+Math.random()*1.8})}
-    size();addEventListener("resize",size);
-    hero.addEventListener("mousemove",function(e){var r=hero.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top});
-    hero.addEventListener("mouseleave",function(){mouse.x=mouse.y=-999});
-    new IntersectionObserver(function(es){run=es[0].isIntersecting;if(run)frame()},{threshold:0}).observe(hero);
-    function frame(){
-      if(!run||document.hidden){if(run)requestAnimationFrame(frame);return}
-      cx.clearRect(0,0,W,H);
-      for(var i=0;i<pts.length;i++){
-        var p=pts[i];p.x+=p.vx;p.y+=p.vy;
-        if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
-        var dx=p.x-mouse.x,dy=p.y-mouse.y,d=Math.sqrt(dx*dx+dy*dy);
-        if(d<140){p.x+=dx/d*1.4;p.y+=dy/d*1.4}
-        cx.beginPath();cx.arc(p.x,p.y,p.r,0,6.283);cx.fillStyle="rgba(120,215,255,.75)";cx.fill();
-        for(var j=i+1;j<pts.length;j++){
-          var q=pts[j],ax=p.x-q.x,ay=p.y-q.y,dd=ax*ax+ay*ay;
-          if(dd<16900){cx.strokeStyle="rgba(34,193,255,"+(.38*(1-dd/16900))+")";cx.lineWidth=1;cx.beginPath();cx.moveTo(p.x,p.y);cx.lineTo(q.x,q.y);cx.stroke()}
-        }
-        if(d<170){cx.strokeStyle="rgba(61,220,132,"+(.5*(1-d/170))+")";cx.beginPath();cx.moveTo(p.x,p.y);cx.lineTo(mouse.x,mouse.y);cx.stroke()}
-      }
-      requestAnimationFrame(frame);
-    }
-    frame();
-  }
-
-  /* heading text scramble on reveal */
-  var chars="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-  function scramble(el){
-    var txt=el.getAttribute("data-t")||el.textContent;el.setAttribute("data-t",txt);
-    var t0=performance.now(),d=800;
-    (function step(t){
-      var p=Math.min((t-t0)/d,1),out="";
-      for(var i=0;i<txt.length;i++){var c=txt[i];out+=(c===" "||i<txt.length*p)?c:chars[Math.floor(Math.random()*chars.length)]}
-      el.textContent=out;if(p<1)requestAnimationFrame(step);else el.textContent=txt;
-    })(t0);
-  }
-  var heads=document.querySelectorAll(".sh h2,.contact h2");
-  var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){scramble(e.target);so.unobserve(e.target)}})},{threshold:.9});
-  heads.forEach(function(h){so.observe(h)});
-
-  /* scroll: marquee skew by velocity, blob parallax */
-  var mq=document.querySelector(".marquee"),last=scrollY,skew=0;
-  (function loop(){
-    var y=scrollY,v=y-last;last=y;
-    skew+=(Math.max(-14,Math.min(14,v*.35))-skew)*.12;
-    if(mq)mq.style.transform="rotate(-1.4deg) skewX("+(-skew)+"deg)";
-    if(y<innerHeight*1.2)hero.style.setProperty("--py",(y*.18)+"px");
-    requestAnimationFrame(loop);
-  })();
-
-  /* custom cursor */
-  if(fine){
-    root.classList.add("has-cursor");
-    var ring=document.querySelector(".cur-ring"),dot=document.querySelector(".cur-dot"),mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
-    addEventListener("mousemove",function(e){mx=e.clientX;my=e.clientY;dot.style.transform="translate("+mx+"px,"+my+"px)"});
-    (function follow(){rx+=(mx-rx)*.16;ry+=(my-ry)*.16;ring.style.transform="translate("+rx+"px,"+ry+"px)";requestAnimationFrame(follow)})();
-    document.addEventListener("mouseover",function(e){ring.classList.toggle("big",!!e.target.closest("a,button,.card,.chips span"))});
-  }
-})();
-</script>
-
-<script>
-(function(){
-  var reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var base=document.title;
-  document.addEventListener("visibilitychange",function(){document.title=document.hidden?"Still in stock? Come back":base});
-  var el=document.getElementById("sphere");if(!el)return;
-  var words=["Inventory management","Stock management","Store operations","Team coordination","POS / ERP","Sales reporting","Time management","Communication","Customer service","Merchandising","Microsoft Excel","Microsoft Word"];
-  var n=words.length,items=words.map(function(w,i){
-    var s=document.createElement("span");s.textContent=w;s.setAttribute("aria-hidden","true");el.appendChild(s);
-    var phi=Math.acos(1-2*(i+.5)/n),th=Math.PI*(1+Math.sqrt(5))*(i+.5);
-    return{s:s,x:Math.cos(th)*Math.sin(phi),y:Math.cos(phi),z:Math.sin(th)*Math.sin(phi)}});
-  var ax=.004,ay=.007,tx=ax,ty=ay,run=true;
-  el.addEventListener("mousemove",function(e){var r=el.getBoundingClientRect();ty=((e.clientX-r.left)/r.width-.5)*.05;tx=-((e.clientY-r.top)/r.height-.5)*.05});
-  el.addEventListener("mouseleave",function(){tx=.004;ty=.007});
-  function draw(){
-    var W=el.clientWidth,H=el.clientHeight,Rx=W*.4,Ry=H*.4;
-    ax+=(tx-ax)*.05;ay+=(ty-ay)*.05;
-    var cx=Math.cos(ax),sx=Math.sin(ax),cy=Math.cos(ay),sy=Math.sin(ay);
-    items.forEach(function(p){
-      var y1=p.y*cx-p.z*sx,z1=p.y*sx+p.z*cx,x2=p.x*cy+z1*sy,z2=-p.x*sy+z1*cy;
-      p.x=x2;p.y=y1;p.z=z2;
-      var d=(z2+1)/2,sc=.7+d*.6;
-      p.s.style.transform="translate(-50%,-50%) translate("+(x2*Rx)+"px,"+(y1*Ry)+"px) scale("+sc+")";
-      p.s.style.opacity=(.25+d*.75).toFixed(2);
-      p.s.style.zIndex=Math.round(d*10);
-      p.s.style.color=d>.72?"#7EDBFF":"#fff";
-      p.s.style.fontSize="1.05rem";
-    });
-  }
-  draw();
-  if(reduce)return;
-  new IntersectionObserver(function(es){run=es[0].isIntersecting;if(run)loop()},{threshold:0}).observe(el);
-  function loop(){if(!run)return;draw();requestAnimationFrame(loop)}
-  loop();
-})();
-</script>
-
-<script>
-(function(){
-  var reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var fine=matchMedia("(hover:hover) and (pointer:fine)").matches;
-
-  /* career path: truck follows scroll along the road */
-  var sec=document.getElementById("path"),road=document.getElementById("rp"),truck=document.getElementById("truck"),stn=document.getElementById("stn");
-  if(sec&&road){
-    var L=road.getTotalLength(),fr=[0,.5,1],dots=[],stops=sec.querySelectorAll(".stops>div"),NS="http://www.w3.org/2000/svg";
-    road.style.strokeDasharray=L;
-    fr.forEach(function(f){var pt=road.getPointAtLength(L*f),c=document.createElementNS(NS,"circle");c.setAttribute("cx",pt.x);c.setAttribute("cy",pt.y);c.setAttribute("r",15);c.setAttribute("class","stn");stn.appendChild(c);dots.push(c)});
-    var cur=reduce?1:0;
-    function place(p){
-      road.style.strokeDashoffset=L*(1-p);
-      var a=road.getPointAtLength(L*p),b=road.getPointAtLength(Math.min(L,L*p+2)),c=road.getPointAtLength(Math.max(0,L*p-2));
-      var ang=Math.atan2(b.y-c.y,b.x-c.x)*180/Math.PI;
-      truck.setAttribute("transform","translate("+a.x+" "+(a.y-14)+") rotate("+ang+")");
-      fr.forEach(function(f,i){var on=p>=f-.001;dots[i].classList.toggle("on",on);stops[i].classList.toggle("on",on)});
-    }
-    place(cur);
-    if(!reduce)(function tick(){
-      var r=sec.getBoundingClientRect(),t=Math.max(0,Math.min(1,(innerHeight*.8-r.top)/(r.height*.75)));
-      cur+=(t-cur)*.08;place(cur);requestAnimationFrame(tick)})();
-    else place(1);
-  }
-
-  if(reduce)return;
-
-  /* click burst of little crates */
-  document.addEventListener("click",function(e){
-    var b=e.target.closest(".btn,.link,.logo");if(!b)return;
-    for(var i=0;i<14;i++){
-      var c=document.createElement("i");c.className="crate";
-      var ang=Math.random()*6.283,d=50+Math.random()*90;
-      c.style.left=e.clientX+"px";c.style.top=e.clientY+"px";
-      c.style.setProperty("--dx",Math.cos(ang)*d+"px");c.style.setProperty("--dy",(Math.sin(ang)*d-30)+"px");c.style.setProperty("--r",(Math.random()*540-270)+"deg");
-      document.body.appendChild(c);setTimeout(function(n){n.remove()},1000,c);
-    }
-  });
-
-  /* sparkle trail */
-  if(!fine)return;
-  var cv=document.getElementById("trail"),cx=cv.getContext("2d"),ps=[],W,H;
-  function rs(){W=cv.width=innerWidth;H=cv.height=innerHeight}rs();addEventListener("resize",rs);
-  addEventListener("mousemove",function(e){for(var i=0;i<2;i++)ps.push({x:e.clientX,y:e.clientY,vx:(Math.random()-.5)*1.6,vy:(Math.random()-.5)*1.6+.4,l:1,g:Math.random()<.3})});
-  (function draw(){
-    cx.clearRect(0,0,W,H);
-    for(var i=ps.length-1;i>=0;i--){
-      var p=ps[i];p.x+=p.vx;p.y+=p.vy;p.l-=.028;
-      if(p.l<=0){ps.splice(i,1);continue}
-      cx.globalAlpha=p.l*.8;cx.fillStyle=p.g?"#3DDC84":"#22C1FF";
-      cx.fillRect(p.x-2.5*p.l,p.y-2.5*p.l,5*p.l+1,5*p.l+1);
-    }
-    cx.globalAlpha=1;requestAnimationFrame(draw);
-  })();
-})();
+  calc();
+}
+const val=id=>$('f_'+id).value;
+function calc(){
+  const c=$('calc');
+  if(cur!=='daily'){c.hidden=true;return}
+  const n=id=>Number(val(id))||0;
+  const total=n('prev')+n('ibos')+n('recov')+n('cashin');
+  const ledger=total-n('expense')-n('cashout')-n('cod');
+  c.hidden=false;c.textContent='Total: '+total+' tk  |  Ledger Amount: '+ledger+' tk';
+}
+async function recent(){
+  $('recent').textContent='Loading...';
+  try{
+    const r=await call('recent',cur);
+    if(!r.rows.length){$('recent').textContent='Ekhono kono entry nei.';return}
+    let h='<table><tr>'+r.head.map(x=>'<th>'+x+'</th>').join('')+'</tr>';
+    r.rows.forEach(row=>h+='<tr>'+row.map(x=>'<td>'+String(x).replace(/</g,'&lt;')+'</td>').join('')+'</tr>');
+    $('recent').innerHTML=h+'</table>';
+  }catch(e){$('recent').textContent=e.message}
+}
+$('save').onclick=async()=>{
+  const d={};F[cur].fields.forEach(([id])=>d[id]=val(id));
+  if(!d.date){say('Tarikh din',1);return}
+  $('save').disabled=true;say('Save hochche...');
+  try{
+    await call('save',cur,d);
+    say('Save hoyeche ✓');
+    F[cur].fields.forEach(([id,,t])=>{if(t!=='date'&&t!=='select')$('f_'+id).value=''});
+    calc();recent();
+  }catch(e){say(e.message,1)}
+  $('save').disabled=false;
+};
+$('enter').onclick=async()=>{
+  PIN=$('pin').value;$('lmsg').textContent='';
+  if(!APP_URL||APP_URL.indexOf('script.google.com')<0){$('lmsg').textContent='APP_URL boshano hoyni';return}
+  try{await call('recent','expense');$('lock').hidden=true;$('app').hidden=false;tabs();form();recent()}
+  catch(e){$('lmsg').textContent=e.message==='Failed to fetch'?'Server er sathe connect hoy nai':e.message}
+};
+$('pin').addEventListener('keydown',e=>{if(e.key==='Enter')$('enter').click()});
 </script>
 </body>
 </html>
