@@ -1,159 +1,473 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Liz Daily Accounts</title>
-<style>
-:root{--bg:#f6f4ee;--ink:#1d2b28;--mut:#66726f;--line:#d9d5c8;--brand:#17594a;--brand2:#e9f1ee;--err:#b3261e;--card:#fff}
-@media (prefers-color-scheme:dark){:root{--bg:#141a18;--ink:#e8eeeb;--mut:#92a09b;--line:#2c3935;--brand:#5fb59e;--brand2:#1d2b27;--err:#f2b8b5;--card:#1b2320}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Segoe UI",system-ui,"Noto Sans Bengali",sans-serif}
-header{padding:18px 16px 8px;max-width:760px;margin:auto}
-h1{margin:0;font-size:22px}
-header p{margin:2px 0 0;color:var(--mut);font-size:14px}
-nav{display:flex;gap:6px;overflow-x:auto;padding:10px 16px;max-width:760px;margin:auto}
-nav button{flex:none;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:9px 14px;border-radius:8px;font:inherit;font-size:14px;cursor:pointer}
-nav button.on{background:var(--brand);color:#fff;border-color:var(--brand)}
-main{max-width:760px;margin:auto;padding:0 16px 40px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-top:8px}
-label{display:block;font-size:14px;color:var(--mut);margin:12px 0 4px}
-input,select,textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit;background:var(--bg);color:var(--ink)}
-input:focus,select:focus,textarea:focus,button:focus-visible{outline:2px solid var(--brand);outline-offset:1px}
-.save{margin-top:16px;width:100%;padding:12px;border:0;border-radius:8px;background:var(--brand);color:#fff;font:inherit;font-weight:600;cursor:pointer}
-.save:disabled{opacity:.6}
-.calc{margin-top:12px;padding:10px;border-radius:8px;background:var(--brand2);font-size:14px}
-#msg{margin-top:10px;font-size:14px;min-height:20px}
-#msg.err,#lmsg{color:var(--err)}
-.tbl{overflow-x:auto;margin-top:10px}
-table{border-collapse:collapse;width:100%;font-size:13px}
-th,td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;white-space:nowrap}
-h2{font-size:16px;margin:22px 0 0}
-#lock{max-width:320px;margin:60px auto;padding:16px}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Conveyance Voucher</title>
+    
+    <!-- Professional Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- html2canvas for high-quality PNG export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    
+    <style>
+        :root {
+            --primary: #0f172a; /* Deep Slate */
+            --primary-light: #1e293b;
+            --text-dark: #1f2937;
+            --text-muted: #4b5563;
+            --border: #d1d5db;
+            --border-light: #e5e7eb;
+            --bg-subtle: #f9fafb;
+            --bg-hover: #f3f4f6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e2e8f0;
+            color: var(--text-dark);
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Action Buttons (Not part of the document) */
+        .toolbar {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 900px;
+            justify-content: flex-end;
+        }
+
+        button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .btn-outline {
+            background: white;
+            border: 1px solid var(--border);
+            color: var(--text-dark);
+        }
+        .btn-outline:hover { background: var(--bg-hover); }
+
+        .btn-solid {
+            background: var(--primary);
+            border: 1px solid var(--primary);
+            color: white;
+        }
+        .btn-solid:hover { background: var(--primary-light); }
+
+        /* Document Paper */
+        .paper {
+            background: white;
+            width: 100%;
+            max-width: 950px;
+            padding: 60px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            position: relative;
+            /* Optional: A subtle double border for a classic certificate/voucher feel */
+            border: 1px solid var(--border);
+        }
+
+        /* Letterhead */
+        .letterhead {
+            text-align: center;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .company-name {
+            font-family: 'Lora', serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .company-address {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        .document-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-top: 15px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Meta Information (Top Section) */
+        .meta-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+
+        .meta-left, .meta-right {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .meta-row {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .label {
+            font-weight: 600;
+            color: var(--text-muted);
+            width: 130px;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+
+        /* Editable fields styling */
+        [contenteditable="true"] {
+            outline: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.2s;
+            padding: 2px 4px;
+            border-radius: 2px;
+        }
+
+        [contenteditable="true"]:hover {
+            background-color: var(--bg-hover);
+            border-bottom: 1px dashed var(--text-muted);
+            cursor: text;
+        }
+
+        [contenteditable="true"]:focus {
+            background-color: var(--bg-subtle);
+            border-bottom: 1px solid var(--primary);
+            box-shadow: 0 2px 0 0 rgba(15, 23, 42, 0.1);
+        }
+
+        /* Formal Table Design */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        th {
+            background-color: var(--bg-subtle);
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 12px 10px;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            text-align: left;
+        }
+
+        td {
+            padding: 12px 10px;
+            border-bottom: 1px solid var(--border-light);
+            vertical-align: middle;
+        }
+
+        tr:last-child td {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .text-center { text-align: center; }
+        .text-right { text-align: right; }
+
+        /* Totals Area */
+        .totals-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 50px;
+            font-size: 14px;
+        }
+
+        .amount-in-words {
+            width: 60%;
+            padding-top: 10px;
+            font-size: 13px;
+        }
+
+        .amount-in-words .words {
+            font-style: italic;
+            font-weight: 500;
+            color: var(--text-dark);
+            border-bottom: 1px solid var(--border-light);
+            display: inline-block;
+            min-width: 200px;
+        }
+
+        .grand-total-box {
+            width: 35%;
+            border: 1px solid var(--border);
+            background: var(--bg-subtle);
+        }
+
+        .grand-total-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .grand-total-row:last-child {
+            border-bottom: none;
+            background: var(--primary);
+            color: white;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        /* Signature Block */
+        .signature-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+            padding-top: 20px;
+        }
+
+        .sig-block {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 90px;
+        }
+
+        .sig-line {
+            border-top: 1px solid var(--text-dark);
+            margin-bottom: 5px;
+            padding-top: 5px;
+            font-weight: 600;
+            font-size: 12px;
+            color: var(--text-dark);
+        }
+
+        .sig-title {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .sig-meta {
+            font-size: 10px;
+            color: var(--text-muted);
+            margin-top: 3px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px;
+        }
+
+    </style>
 </head>
 <body>
 
-<div id="lock" class="card">
-  <h1>Liz Daily Accounts</h1>
-  <label for="pin">PIN</label>
-  <input id="pin" type="password" inputmode="numeric" autocomplete="off">
-  <button class="save" id="enter">Dhukun</button>
-  <div id="lmsg" style="margin-top:8px;font-size:14px"></div>
-</div>
-
-<div id="app" hidden>
-  <header><h1>Liz Fashion – Daily Accounts</h1><p>Ekhane entry dile sheet-e sathe sathe add hobe.</p></header>
-  <nav id="tabs"></nav>
-  <main>
-    <div class="card">
-      <div id="fields"></div>
-      <div id="calc" class="calc" hidden></div>
-      <button class="save" id="save">Save korun</button>
-      <div id="msg" role="status"></div>
+    <!-- Toolbar (Excluded from PNG) -->
+    <div class="toolbar">
+        <button class="btn-outline" onclick="addRow()">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+            Add Row
+        </button>
+        <button class="btn-solid" onclick="downloadAsPNG()">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+            Save as PNG
+        </button>
     </div>
-    <h2>Sesh 10 ti entry</h2>
-    <div class="tbl" id="recent"></div>
-  </main>
-</div>
 
-<script>
-// ===== EKHANE APNAR WEB APP URL BOSHAN (Deploy korar por pabe) =====
-const APP_URL = 'https://script.google.com/macros/s/AKfycbxd8zXJAlK0SV6vv5B05mQ3lxjJQ2Rkr0MT6Koxe9jbGbPVaEJjClcxV1BPGzxQpBS-FQ/exec';
-// ====================================================================
+    <!-- Main Document Area -->
+    <div class="paper" id="voucher-document">
+        
+        <!-- Letterhead -->
+        <div class="letterhead">
+            <div class="company-name" contenteditable="true">Your Company Name Ltd.</div>
+            <div class="company-address" contenteditable="true">123 Corporate Avenue, Business District, Dhaka-1200 | Phone: +880 1234 567890</div>
+            <div class="document-title">Conveyance Voucher</div>
+        </div>
 
-const F = {
-  expense:{title:'Expense',fields:[
-    ['date','Tarikh','date'],['name','Expense name','text'],['note','Note / karon','textarea'],
-    ['amount','Amount (tk)','number'],['code','Expense code (IE...)','text'],
-    ['status','Status','select',['entry done','pending','approved']]]},
-  cash:{title:'Cash In / Out',fields:[
-    ['date','Tarikh','date'],['kind','Dhoron','select',['Cash In','Cash Out']],
-    ['note','Note','text'],['amount','Amount (tk)','number']]},
-  recovery:{title:'Recovery',fields:[
-    ['date','Tarikh','date'],['custId','Customer ID','text'],['custName','Customer name','text'],
-    ['amount','Amount (tk)','number'],['exchange','Exchange with cash','number'],['remarks','Remarks','text']]},
-  baki:{title:'Baki taka pabo',fields:[
-    ['date','Tarikh','date'],['name','Customer name + ID','text'],['amount','Amount (tk)','number'],
-    ['reason','Karon','textarea']]},
-  daily:{title:'Daily Cash Summary',fields:[
-    ['date','Tarikh','date'],['prev','Previous Ledger','number'],['ibos','IBOS Cash Sales','number'],
-    ['recov','Recovery Sales','number'],['cashin','Cash In','number'],['expense','Expense','number'],
-    ['cashout','Cash Out','number'],['cod','COD','number']]}
-};
-let cur='expense', PIN='';
-const $=id=>document.getElementById(id);
-const today=()=>{const d=new Date();return new Date(d-d.getTimezoneOffset()*6e4).toISOString().slice(0,10)};
+        <!-- Meta Info -->
+        <div class="meta-section">
+            <div class="meta-left">
+                <div class="meta-row"><span class="label">Employee Name :</span> <span contenteditable="true">Sishir Halder, Nion Sikder</span></div>
+                <div class="meta-row"><span class="label">Designation :</span> <span contenteditable="true">Shop Incharge & Shop Executive</span></div>
+                <div class="meta-row"><span class="label">Department :</span> <span contenteditable="true">Operation</span></div>
+            </div>
+            <div class="meta-right">
+                <div class="meta-row"><span class="label">Voucher No :</span> <span contenteditable="true">CV-2026-10-0041</span></div>
+                <div class="meta-row"><span class="label">Employee ID :</span> <span contenteditable="true">0441, 0937</span></div>
+                <div class="meta-row"><span class="label">Date :</span> <span contenteditable="true">25/10/2026</span></div>
+            </div>
+        </div>
 
-async function call(action,type,d){
-  const r=await fetch(APP_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},
-    body:JSON.stringify({action,type,d,pin:PIN})});
-  const j=await r.json();
-  if(!j.ok)throw new Error(j.error||'Error');
-  return j.data;
-}
-function say(t,err){const m=$('msg');m.textContent=t;m.className=err?'err':''}
+        <!-- Data Table -->
+        <table id="voucher-table">
+            <thead>
+                <tr>
+                    <th style="width: 12%; text-align: center;">Date</th>
+                    <th style="width: 18%;">From</th>
+                    <th style="width: 18%;">To</th>
+                    <th style="width: 32%;">Purpose / Remarks</th>
+                    <th style="width: 10%; text-align: center;">Mode</th>
+                    <th style="width: 10%; text-align: right;">Amount (TK)</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <tr>
+                    <td contenteditable="true" class="text-center">24/10/2026</td>
+                    <td contenteditable="true">Liz</td>
+                    <td contenteditable="true">Essential Clothing Ltd.</td>
+                    <td contenteditable="true">Visited Essential Clothing Ltd. to support duty</td>
+                    <td contenteditable="true" class="text-center">Auto</td>
+                    <td contenteditable="true" class="text-right amount-input">120</td>
+                </tr>
+                <tr>
+                    <td contenteditable="true" class="text-center">24/10/2026</td>
+                    <td contenteditable="true">Essential Clothing Ltd.</td>
+                    <td contenteditable="true">Liz</td>
+                    <td contenteditable="true">Visited Essential Clothing Ltd. to support duty</td>
+                    <td contenteditable="true" class="text-center">Auto</td>
+                    <td contenteditable="true" class="text-right amount-input">120</td>
+                </tr>
+            </tbody>
+        </table>
 
-function tabs(){
-  $('tabs').innerHTML='';
-  Object.keys(F).forEach(k=>{
-    const b=document.createElement('button');b.textContent=F[k].title;
-    if(k===cur)b.className='on';
-    b.onclick=()=>{cur=k;tabs();form();recent()};
-    $('tabs').appendChild(b);
-  });
-}
-function form(){
-  const box=$('fields');box.innerHTML='';say('');
-  F[cur].fields.forEach(([id,lab,type,opts])=>{
-    const l=document.createElement('label');l.htmlFor='f_'+id;l.textContent=lab;box.appendChild(l);
-    let el;
-    if(type==='select'){el=document.createElement('select');opts.forEach(o=>{const op=document.createElement('option');op.textContent=o;el.appendChild(op)})}
-    else if(type==='textarea'){el=document.createElement('textarea');el.rows=2}
-    else{el=document.createElement('input');el.type=type;if(type==='number'){el.inputMode='decimal';el.step='any'}}
-    el.id='f_'+id;if(type==='date')el.value=today();
-    el.oninput=calc;box.appendChild(el);
-  });
-  calc();
-}
-const val=id=>$('f_'+id).value;
-function calc(){
-  const c=$('calc');
-  if(cur!=='daily'){c.hidden=true;return}
-  const n=id=>Number(val(id))||0;
-  const total=n('prev')+n('ibos')+n('recov')+n('cashin');
-  const ledger=total-n('expense')-n('cashout')-n('cod');
-  c.hidden=false;c.textContent='Total: '+total+' tk  |  Ledger Amount: '+ledger+' tk';
-}
-async function recent(){
-  $('recent').textContent='Loading...';
-  try{
-    const r=await call('recent',cur);
-    if(!r.rows.length){$('recent').textContent='Ekhono kono entry nei.';return}
-    let h='<table><tr>'+r.head.map(x=>'<th>'+x+'</th>').join('')+'</tr>';
-    r.rows.forEach(row=>h+='<tr>'+row.map(x=>'<td>'+String(x).replace(/</g,'&lt;')+'</td>').join('')+'</tr>');
-    $('recent').innerHTML=h+'</table>';
-  }catch(e){$('recent').textContent=e.message}
-}
-$('save').onclick=async()=>{
-  const d={};F[cur].fields.forEach(([id])=>d[id]=val(id));
-  if(!d.date){say('Tarikh din',1);return}
-  $('save').disabled=true;say('Save hochche...');
-  try{
-    await call('save',cur,d);
-    say('Save hoyeche ✓');
-    F[cur].fields.forEach(([id,,t])=>{if(t!=='date'&&t!=='select')$('f_'+id).value=''});
-    calc();recent();
-  }catch(e){say(e.message,1)}
-  $('save').disabled=false;
-};
-$('enter').onclick=async()=>{
-  PIN=$('pin').value;$('lmsg').textContent='';
-  if(!APP_URL||APP_URL.indexOf('script.google.com')<0){$('lmsg').textContent='APP_URL boshano hoyni';return}
-  try{await call('recent','expense');$('lock').hidden=true;$('app').hidden=false;tabs();form();recent()}
-  catch(e){$('lmsg').textContent=e.message==='Failed to fetch'?'Server er sathe connect hoy nai':e.message}
-};
-$('pin').addEventListener('keydown',e=>{if(e.key==='Enter')$('enter').click()});
-</script>
+        <!-- Totals Section -->
+        <div class="totals-area">
+            <div class="amount-in-words">
+                <span class="label" style="display:block; margin-bottom:5px; width:auto;">Amount in Words:</span>
+                <span class="words" contenteditable="true">Two hundred forty Taka only</span>
+            </div>
+            
+            <div class="grand-total-box">
+                <div class="grand-total-row">
+                    <span>Sub Total</span>
+                    <span id="sub-total">240.00</span>
+                </div>
+                <div class="grand-total-row">
+                    <span>Grand Total</span>
+                    <span><span id="grand-total">240.00</span> BDT</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formal Signatures -->
+        <div class="signature-section">
+            <div class="sig-block">
+                <div class="sig-line" contenteditable="true">Sishir Halder, Nion Sikder</div>
+                <div class="sig-title">Claimant Signature</div>
+                <div class="sig-meta"><span>Date: _________</span></div>
+            </div>
+            <div class="sig-block">
+                <div class="sig-line" contenteditable="true"></div>
+                <div class="sig-title">Checked By (Finance)</div>
+                <div class="sig-meta"><span>Date: _________</span></div>
+            </div>
+            <div class="sig-block">
+                <div class="sig-line" contenteditable="true"></div>
+                <div class="sig-title">Approved By (N+1)</div>
+                <div class="sig-meta"><span>Date: _________</span></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Calculate Totals
+        function calculateTotal() {
+            const amounts = document.querySelectorAll('.amount-input');
+            let total = 0;
+            
+            amounts.forEach(cell => {
+                // Remove commas if user types them
+                const rawValue = cell.innerText.replace(/,/g, '').trim();
+                const val = parseFloat(rawValue) || 0;
+                total += val;
+            });
+            
+            // Format numbers with 2 decimal places (standard financial format)
+            const formattedTotal = total.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+            
+            document.getElementById('sub-total').innerText = formattedTotal;
+            document.getElementById('grand-total').innerText = formattedTotal;
+        }
+
+        // Add new row
+        function addRow() {
+            const tbody = document.getElementById('table-body');
+            const newRow = document.createElement('tr');
+            
+            newRow.innerHTML = `
+                <td contenteditable="true" class="text-center"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true" class="text-center"></td>
+                <td contenteditable="true" class="text-right amount-input">0</td>
+            `;
+            
+            tbody.appendChild(newRow);
+            calculateTotal(); 
+        }
+
+        // Recalculate on input
+        document.getElementById('table-body').addEventListener('input', calculateTotal);
+
+        // Download PNG with High Quality
+        function downloadAsPNG() {
+            const doc = document.getElementById('voucher-document');
+            
+            // Remove focus from any cell so the blue highlight doesn't show in the image
+            if (document.activeElement) {
+                document.activeElement.blur();
+            }
+
+            // html2canvas configurations
+            html2canvas(doc, {
+                scale: 3, // High resolution
+                useCORS: true,
+                backgroundColor: "#ffffff",
+                windowWidth: 1000,
+                logging: false
+            }).then(canvas => {
+                const link = document.createElement('a');
+                link.download = 'Conveyance_Voucher_Oct_2026.png';
+                link.href = canvas.toDataURL('image/png', 1.0);
+                link.click();
+            });
+        }
+    </script>
 </body>
 </html>
